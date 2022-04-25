@@ -1,0 +1,16 @@
+@mixin display-after($screen) {
+  // "xs" this is mobile - default (mobile first)
+  @if $screen == sm { // tablet
+    @media screen and (min-width: $--screen-sm) {
+      @content;
+    }
+  } @else if $screen == md { // desktop
+    @media screen and (min-width: $--screen-md) {
+      @content;
+    }
+  } @else if $screen == lg { // large
+    @media screen and (min-width: $--screen-lg) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+// After changing, update also in globalSettings
+// Actual breakpoints (mobile first)
+$--screen-sm: 1020px;
+$--screen-md: 1440px;
+$--screen-lg: 1660px;
+
+// Old breakpoints (remove after processing @mixin display-after)
+// $--screen-sm-min: 768px;
+// $--screen-md-min: 992px;
+// $--screen-lg-min: 1280px;
