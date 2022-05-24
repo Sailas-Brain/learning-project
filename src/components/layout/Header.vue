@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="header-top-wrap">
-      <div class="header-">
+      <div class="header-top">
         <div class="logo header-logo">
           <img class= "" src="@/assets/pictures/Logo.svg">
         </div>
@@ -15,7 +15,11 @@
           </button>
         </div>
 
-        <div class="phone header-phone">+7 (495) 911-10-11</div>
+        <div class="phone header-phone">
+          <p class="phone-text">+7 (495) 911-10-11</p>
+        </div>
+
+
       </div>
     </div>  
       <div>
@@ -36,12 +40,20 @@ export default {
 <style lang="scss" scoped>
   .header {
     max-width: 1600px;
+    height: 134px;
+
   }
 
   .header-top-wrap {
-    display: flex;
     background: #2A2A2A;
     width: 100%;
+    height: 82px;
+  }
+
+  .header-top {
+    display: flex;
+    margin: 0 auto;
+    width: 1110px;
   }
 
   .search {
@@ -54,6 +66,7 @@ export default {
     box-sizing: border-box;
     width: 100%;
     height: 38px;
+
     padding-right: 40px;
     outline: none;
     border: 0;
@@ -76,6 +89,27 @@ export default {
   }
 
   .phone {
-    color: #fff;
+    color: #ffffff;
+    width: auto;
+    height: 30px;
+
+    font-family: "trebuchetms";
+    font-weight: 700;
+    font-size: 20px;
+
+    box-sizing: border-box;
+    padding-left: 35px;
   }
+
+  .header-phone {
+    background-image: url(../../assets/pictures/icomoon-free_phone.svg);
+    background-repeat: no-repeat;
+  }
+
+  .phone-text {
+
+  }
+
+
+
 </style>
