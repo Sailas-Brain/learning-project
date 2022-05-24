@@ -59,24 +59,31 @@ export default {
     LinkButton
   },
   data() {
-      return {
-        options: {
-          rewind : true,
-          width  : 1600,
-          gap    : '1rem',
-          type   : 'loop',
-          padding: '20%',
-          pagination: false
+    return {
+      options: {
+        rewind : true,
+        width  : '100%',
+        gap    : '1rem',
+        type   : 'loop',
+        padding: '20%',
+        pagination: false,
+        breakpoints: {
+          1300: {
+            padding: 0,
+            perPage: 1,
+          },
         },
-      };
-    },
+      }
+    }
+  }
 }
 
 </script>
 
 <style lang="scss" >
   .banner {
-    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .splide__arrow {
@@ -85,6 +92,7 @@ export default {
 
   .banner-img {
     margin: 0px 8px;
+    width: 100%;
   }
 
   .banner-wrap {
@@ -96,6 +104,7 @@ export default {
   .banner-discription {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 90%;
     margin: auto;
     align-items: center;

@@ -4,11 +4,13 @@
     <my-button class="button">Создать пост</my-button>
     <link-button class="button">Создать пост</link-button>
     <banner-on-main />
+    
   </main>
 </template>
 
 <script>
   import bannerOnMain from '@/components/bannerOnMain.vue'
+
   export default {
     props: {
       msg: {
@@ -17,7 +19,7 @@
       }
     },
     components: {
-      bannerOnMain
+      bannerOnMain,
     }
   }
 
