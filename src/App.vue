@@ -9,10 +9,9 @@ import { RouterLink, RouterView } from 'vue-router'
 </template>
 
 <style>
-@import '@/assets/base.css';
 
 .container {
-  width: 1200px;
+  width: 1600px;
   margin: 0 auto;
 }
 
