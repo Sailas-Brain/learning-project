@@ -9,7 +9,6 @@ import { RouterLink, RouterView } from 'vue-router'
 </template>
 
 <style>
-@import '@/assets/base.css';
 
 .container {
   width: 1200px;
