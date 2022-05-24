@@ -8,7 +8,7 @@ import { RouterLink, RouterView } from 'vue-router'
   </div>
 </template>
 
-<style>
+<style lang="scss">
 
 .container {
   width: 1600px;

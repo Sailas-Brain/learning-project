@@ -27,7 +27,8 @@
   .greetings {
 
     h1 {
-      color: yellow;
+      color: $--color-dove-gray;
+      font-family: "trebuchetms";
     }
     
   }
