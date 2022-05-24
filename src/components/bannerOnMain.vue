@@ -3,37 +3,43 @@
     <splide :options="options">
     <splide-slide>
       <img class="banner-img" src="@/assets/images/Rectangle 13.jpg">
-      <div class="banner-discription">
-        <div class="banner-text">
-          <p class="banner-relation">Самая популярная карточная игра</p>
-          <p class="banner-game">Magic: the Gathering</p>
-        </div>
-        <div class="banner-link">
-          <link-button class="banner-more" href="#">Подробнее</link-button>
-        </div>
-      </div>
-    </splide-slide>
-    <splide-slide>
-      <img class="banner-img" src="@/assets/images/Rectangle 13.jpg">
-      <div class="banner-discription">
-        <div class="banner-text">
-          <p class="banner-relation">Самая популярная карточная игра</p>
-          <p class="banner-game">Magic: the Gathering</p>
-        </div>
-        <div class="banner-link">
-          <link-button class="banner-more" href="#">Подробнее</link-button>
+      <div class="banner-wrap">
+        <div class="banner-discription">
+          <div class="banner-text">
+            <p class="banner-relation">Самая популярная карточная игра</p>
+            <p class="banner-game">Magic: the Gathering</p>
+          </div>
+          <div class="banner-link">
+            <link-button class="banner-more" href="#">Подробнее</link-button>
+          </div>
         </div>
       </div>
     </splide-slide>
     <splide-slide>
       <img class="banner-img" src="@/assets/images/Rectangle 13.jpg">
-      <div class="banner-discription">
-        <div class="banner-text">
-          <p class="banner-relation">Самая популярная карточная игра</p>
-          <p class="banner-game">Magic: the Gathering</p>
+      <div class="banner-wrap">
+        <div class="banner-discription">
+          <div class="banner-text">
+            <p class="banner-relation">Самая популярная карточная игра</p>
+            <p class="banner-game">Magic: the Gathering</p>
+          </div>
+          <div class="banner-link">
+            <link-button class="banner-more" href="#">Подробнее</link-button>
+          </div>
         </div>
-        <div class="banner-link">
-          <link-button class="banner-more" href="#">Подробнее</link-button>
+      </div>
+    </splide-slide>
+    <splide-slide>
+      <img class="banner-img" src="@/assets/images/Rectangle 13.jpg">
+      <div class="banner-wrap">
+        <div class="banner-discription">
+          <div class="banner-text">
+            <p class="banner-relation">Самая популярная карточная игра</p>
+            <p class="banner-game">Magic: the Gathering</p>
+          </div>
+          <div class="banner-link">
+            <link-button class="banner-more" href="#">Подробнее</link-button>
+          </div>
         </div>
       </div>
     </splide-slide>
@@ -81,12 +87,22 @@ export default {
     margin: 0px 8px;
   }
 
+  .banner-wrap {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
   .banner-discription {
     display: flex;
     justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    align-items: center;
   }
 
   .banner-relation {
+    margin: 0;
     font-family: "trebuchetms";
     font-weight: 400;
     font-size: 14px;
@@ -95,6 +111,8 @@ export default {
   }
 
   .banner-game {
+    margin-top: 0;
+    font-family: "trebuchetms";
     font-weight: 700;
     font-size: 28px;
     line-height: 33px;

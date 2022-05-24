@@ -29,6 +29,7 @@ export default {
     cursor: pointer;
     margin-top: 15px;
     margin-bottom: 15px;
+    font-family: "trebuchetms";
   }
 
 </style>
