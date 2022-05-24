@@ -10,7 +10,6 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <style>
 
-
 .container {
   width: 1600px;
   margin: 0 auto;
