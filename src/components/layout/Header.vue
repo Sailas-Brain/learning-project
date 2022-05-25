@@ -2,9 +2,9 @@
   <header class="header">
     <div class="header__top-wrap">
       <div class="header__top">
-        <div class="header__logo">
+        <a class="header__logo" href="#">
           <img src="@/assets/pictures/Logo.svg">
-        </div>
+        </a>
 
         <div class="header__search">
           <input class="header__field" type="text" name="search" placeholder="Найти игру">
@@ -26,7 +26,7 @@
             </svg>
           </button>
 
-          <a href="#" class="header__icons-cart">
+          <a class="header__icons-cart" href="#" >
             <svg width="30" height="30" viewBox="0 0 30 27" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M28.741 6.20821C28.489 5.77161 28.1282 5.40778 27.6937 5.15219C27.2592 4.89661 26.7659 4.75799 26.2618 4.74988H7.59518L6.74935 1.45405C6.66389 1.13589 6.47323 0.856047 6.20842 0.660088C5.94361 0.464128 5.62025 0.363601 5.29102 0.374879H2.37435C1.98757 0.374879 1.61664 0.528524 1.34315 0.802015C1.06966 1.07551 0.916016 1.44644 0.916016 1.83321C0.916016 2.21999 1.06966 2.59092 1.34315 2.86441C1.61664 3.1379 1.98757 3.29155 2.37435 3.29155H4.18268L8.20768 18.254C8.29314 18.5722 8.4838 18.852 8.74861 19.048C9.01342 19.244 9.33678 19.3445 9.66602 19.3332H22.791C23.0603 19.3324 23.3241 19.257 23.5532 19.1154C23.7823 18.9739 23.9677 18.7716 24.0889 18.5311L28.8723 8.96446C29.0796 8.5299 29.1761 8.05077 29.1532 7.56983C29.1303 7.08889 28.9887 6.62111 28.741 6.20821Z" fill="white"/>
               <path d="M8.9375 26.625C10.1456 26.625 11.125 25.6456 11.125 24.4375C11.125 23.2294 10.1456 22.25 8.9375 22.25C7.72938 22.25 6.75 23.2294 6.75 24.4375C6.75 25.6456 7.72938 26.625 8.9375 26.625Z" fill="white"/>
@@ -41,13 +41,25 @@
     <div class="header__bottom-wrap">
       <div class="header__bottom">
         <nav class="header__navigation">
+          <span class="header__icon-burger"></span>
           <button class="header__burger">Каталог</button>
+
           <ul class="header__list">
-            <li class="header__item"><a class="header__item-link" href="#">Wharhammer</a></li>
-            <li class="header__item"><a class="header__item-link" href="#">Magic:the Cathering</a></li>
-            <li class="header__item"><a class="header__item-link" href="#">Мероприятия</a></li>
-            <li class="header__item"><a class="header__item-link" href="#">О центре</a></li>
-            <li class="header__item"><a class="header__item-link" href="#">Контакты</a></li>
+            <li class="header__item">
+              <a class="header__item-link" href="#">Wharhammer</a>
+            </li>
+            <li class="header__item">
+              <a class="header__item-link" href="#">Magic:the Cathering</a>
+            </li>
+            <li class="header__item">
+              <a class="header__item-link" href="#">Мероприятия</a>
+            </li>
+            <li class="header__item">
+              <a class="header__item-link" href="#">О центре</a>
+            </li>
+            <li class="header__item">
+              <a class="header__item-link" href="#">Контакты</a>
+            </li>
           </ul>
 
           <div class="header__social">
@@ -77,6 +89,88 @@
             </a>
           </div>
 
+
+          <div class="header__container-menu">
+            <div class="header__menu">
+              <div class="header__category">                
+                <button class="header__button-close">Все категории</button>
+                <ul class="header__list-category">
+                  <li class="header__item">
+                    <a class="header__catalog-link">Настольные игры</a>
+                  </li>
+                  <li class="header__item">
+                    <a class="header__catalog-link">Warhammer 40000</a>
+                  </li>
+                  <li class="header__item">
+                    <a class="header__catalog-link">Magic: the Gathering</a>
+                  </li>
+                  <li class="header__item">
+                    <a class="header__catalog-link">Аксессуары для игр</a>
+                  </li>
+                  <li class="header__item">
+                    <a class="header__catalog-link">Краски</a>
+                  </li>
+                  <li class="header__item">
+                    <a class="header__catalog-link">Товары для детей</a>
+                  </li>
+                  <li class="header__item">
+                    <a class="header__catalog-link">Аксессуары для моделизма</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="header__catalog-product">
+                <p class="header__catalog-title">Warhammer 40000</p>
+
+                <div class="header__list-wrapper">
+
+                  <ul class="header__list-product">
+                    <li class="header__product-item">
+                      <a class="header__link-product">Альтернативные миниатюры (69)</a>
+                    </li>
+                    <li class="header__product-item">
+                      <a class="header__link-product">Warhammer 40k (400)</a>
+                    </li>
+                    <li class="header__product-item">
+                      <a class="header__link-product">Age of Sigmar (263)</a>
+                    </li>
+                    <li class="header__product-item">
+                      <a class="header__link-product">Warcry (49)</a>
+                    </li>
+                  </ul>
+
+                  <ul class="header__list-product">
+                    <li class="header__product-item">
+                      <a class="header__link-product">Nercomunda (21)</a>
+                    </li>
+                    <li class="header__product-item">
+                      <a class="header__link-product">Lord of the Rings(16)</a>
+                    </li>
+                    <li class="header__product-item">
+                      <a class="header__link-product">Blood Bowl (28)</a>
+                    </li>
+                    <li class="header__product-item">
+                      <a class="header__link-product">Titanicus (4)</a>
+                    </li>
+                  </ul>
+
+                  <ul class="header__list-product">
+                    <li class="header__product-item">
+                      <a class="header__link-product">Warcry (49)</a>
+                    </li>
+                    <li class="header__product-item">
+                      <a class="header__link-product">Warhammer: Underworlds (22)</a>
+                    </li>
+                    <li class="header__product-item">
+                      <a class="header__link-product">Killtem (4)</a>
+                    </li>
+                  </ul>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
         </nav>
 
       </div>
@@ -95,13 +189,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  * {
+    padding: 0;
+    margin: 0;
+  }
   .header {
+    position: relative;
     max-width: 100%;
 
     &__top-wrap {
       background: #2A2A2A;
       width: 100%;
       height: 82px;
+      padding: 0 25px;
+      box-sizing: border-box
     }
 
     &__top {
@@ -114,6 +215,7 @@ export default {
     }
 
     &__logo {
+      display: block;
       height: 37px;
       width: 157px;
     }
@@ -191,7 +293,6 @@ export default {
       background-color: #2A2A2A;
       border: none;
       outline: none;
-
       cursor: pointer;
     }
 
@@ -204,6 +305,8 @@ export default {
       width: 100%;
       height: 52px;
       background: #F2F2F2;
+      padding: 0 25px;
+      box-sizing: border-box;
     }
 
     &__bottom {
@@ -214,6 +317,7 @@ export default {
 
     &__navigation {
       display: flex;
+      align-items: center;
       width: 100%;
       height: 52px;
 
@@ -232,6 +336,37 @@ export default {
       background: inherit;
       outline: none;
       border: none;
+
+      cursor: pointer;
+    }
+
+    &__icon-burger {
+      position: relative;
+      display: block;
+      margin-right: 10px;
+      height: 2px;
+      width: 19px;
+      background: #2A2A2A;
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        height: 2px;
+        width: 16px;
+        background: #2A2A2A;
+      }
+
+      &::before {
+        top: 5px;
+      }
+
+      &::after {
+        top: -5px;
+      }
+
     }
 
     &__list {
@@ -248,7 +383,6 @@ export default {
       font-family: "trebuchetms";
       font-weight: 700;
       font-size: 16px;
-
     }
 
     &__item-link {
@@ -265,20 +399,157 @@ export default {
     }
 
     &__social-icon {
-      width: 20px;
+      width: 24px;
+    }
+
+    &__container-menu {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0px;
+      width: 100%;
+      height: 1800px;
+      background: rgba(00, 00, 00, 0.65);
+      z-index: 1;
+    }
+
+    &__menu {
+      display: flex;
+      margin: 0 auto;
+      max-width: 1109px;
+      min-height: 390px;
+      background: #FFFBF8;
+      margin-top: 82px;
+      
+      /* тень активная */
+      box-shadow: 5px 6px 15px rgba(251, 121, 27, 0.63);
+    }
+
+    &__category {
+      width: 255px;
+      border-right: 2px solid rgba(42, 42, 42, 0.26);
+    }
+
+    &__button-close {
+      position: relative;
+      font-family: "trebuchetms";
+      font-weight: 700;
+      font-size: 16px;
+      background: #FFFBF8;
+      border: 0;
+      border-bottom: 2px solid rgba(42, 42, 42, 0.26);
+      outline: 0;
+      width: 100%;
+      height: 46px;
+      text-align: center;
+      padding-left: 10px;
+      cursor: pointer;
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        top: 22px;
+        left: 28px;
+
+        height: 2px;
+        width: 17px;
+        background: #2A2A2A;
+
+      }
+
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
 
     }
+
+
+    &__catalog-link {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      font-family: "trebuchetms";
+      font-weight: 700;
+      font-size: 16px;
+
+      background: #FFFBF8;
+      border: 0;
+      outline: 0;
+      height: 46px;
+      padding-left: 30px;
+      text-align: start;
+
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 18px;
+        right: 16px;
+        height: 8px;
+        width: 8px;
+        
+        border-top: 2px solid #C8C5C3;
+        border-right: 2px solid #C8C5C3;
+
+        transform: rotate(45deg);
+      }
+
+      &:focus,
+      &:hover {
+        background: #F9A43F;
+
+        &::after {
+          border-top: 2px solid #2A2A2A;
+          border-right: 2px solid #2A2A2A;
+        }
+      }
+    }
+
+    &__catalog-product {
+      width: 864px;
+      padding-left: 30px;
+      padding-top: 17px;
+      padding-right: 50px;
+    }
+
+    &__catalog-title {
+      font-family: "trebuchetms";
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    &__list-wrapper {
+      display: flex;
+      margin-top: 25px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    &__product-item {
+      list-style: none;
+      display: inline;
+    }
+
+    &__link-product {
+      display: inline-block;
+      box-sizing: border-box;
+      font-family: "trebuchetms";
+      font-weight: 700;
+      font-size: 16px;
+      width: 100%;
+      height: 40px;
+      line-height: 249.6%;
+      // padding-right: 25px;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
   }
-
-
-
-
-
-
-
-
-
-
-
 
 </style>
