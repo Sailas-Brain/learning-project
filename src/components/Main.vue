@@ -2,14 +2,13 @@
   <main class="greetings">
     <banner-on-main />
     <catalog-on-main />
-    <card-product />
   </main>
 </template>
 
 <script>
   import bannerOnMain from '@/components/bannerOnMain.vue'
   import CatalogOnMain from '@/components/CatalogOnMain.vue'
-  import cardProduct from '@/components/cardProduct.vue'
+
   
 
   export default {
@@ -22,7 +21,7 @@
     components: {
       bannerOnMain,
       CatalogOnMain,
-      cardProduct
+    
     }
   }
 
