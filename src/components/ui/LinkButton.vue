@@ -26,6 +26,8 @@ export default {
     line-height: 16px;
     color: #FFFFFF;
     border-radius: 9px;
+    outline: 0;
+    border: none;
     cursor: pointer;
     margin-top: 15px;
     margin-bottom: 15px;
