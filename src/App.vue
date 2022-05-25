@@ -13,7 +13,7 @@ import { RouterLink, RouterView } from 'vue-router'
 .container {
   width: 100%;
   margin: 0 auto;
-  background: #2A2A2A;
+  background: #f5f5f8;
 }
 
 </style>
