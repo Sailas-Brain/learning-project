@@ -5,12 +5,14 @@
     <link-button class="button">Создать пост</link-button>
     <banner-on-main />
     <catalog-on-main />
+    <card-product />
   </main>
 </template>
 
 <script>
   import bannerOnMain from '@/components/bannerOnMain.vue'
   import CatalogOnMain from '@/components/CatalogOnMain.vue'
+  import cardProduct from '@/components/cardProduct.vue'
 
   export default {
     props: {
@@ -21,7 +23,8 @@
     },
     components: {
       bannerOnMain,
-      CatalogOnMain
+      CatalogOnMain,
+      cardProduct
     }
   }
 
