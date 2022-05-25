@@ -1,11 +1,7 @@
 <template>
   <main class="greetings">
-    <h1>{{ msg }}</h1>
-    <my-button class="button">Создать пост</my-button>
-    <link-button class="button">Создать пост</link-button>
     <banner-on-main />
     <catalog-on-main />
-    
   </main>
 </template>
 
