@@ -1,10 +1,10 @@
 <template>
   <div class="card">
     <div class="card__wrapp">
-      <img class="card__img" src="@/assets/images/image 12.jpg" width="193px" height="168px" alt="">
+      <img class="card__img" src="@/assets/images/chaos_space_marines.jpg" alt="">
       <div class="card__params">
         <div class="card__audience">
-          <img src="@/assets/images/audience 1.svg" width="18px" height="18px" alt="">
+          <img src="@/assets/images/audience_1.svg" alt="">
           <p>2-4</p>
         </div>
         <div class="card__time">
@@ -15,7 +15,7 @@
       </div>
       <h4 class="card__name">Warhammer 40,000: Chaos Space Marines</h4>
       <p class="card__price">3657 ₽</p>
-      <button class="card__basket">В корзину <img src="@/assets/images/clarity_shopping-cart-line.svg" alt=""></button>
+      <button class="card__basket">В корзину <img src="@/assets/images/shopping-cart.svg" alt=""></button>
       <a class="card__buy-now" href="">Купить в 1 клик</a>
     </div>
   </div>
@@ -55,6 +55,8 @@
       display: block;
       margin: auto;
       margin-bottom: 5px;
+      width: 193px;
+      height: 168px;
     }
 
     &__params {
@@ -80,6 +82,8 @@
 
       img {
         margin-right: 5px;
+        width: 18px;
+        height: 18px;
       }
     }
 
