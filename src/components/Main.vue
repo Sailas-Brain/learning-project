@@ -10,7 +10,6 @@
 
 <script>
   import bannerOnMain from '@/components/bannerOnMain.vue'
-  import CatalogOnMain from '@/components/CatalogOnMain.vue'
 
   export default {
     props: {
@@ -21,7 +20,7 @@
     },
     components: {
       bannerOnMain,
-      CatalogOnMain
+
     }
   }
 
