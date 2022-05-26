@@ -8,6 +8,7 @@
 <script>
   import bannerOnMain from '@/components/bannerOnMain.vue'
   import CatalogOnMain from '@/components/CatalogOnMain.vue'
+
   
 
   export default {
@@ -20,7 +21,7 @@
     components: {
       bannerOnMain,
       CatalogOnMain,
-      
+    
     }
   }
 
