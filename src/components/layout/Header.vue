@@ -9,7 +9,7 @@
         <div class="header__search">
           <input class="header__field" type="text" name="search" placeholder="Найти игру">
           <button class="header__button" type="submit">
-            <img class="header__search-icon" src="../../assets/pictures/icons_search.svg">
+            <img class="header__search-icon" src="@/assets/pictures/icons_search.svg">
           </button>
         </div>
 
@@ -33,8 +33,10 @@
     <div class="header__bottom-wrap">
       <div class="header__bottom">
         <nav class="header__navigation">
-          <span class="header__icon-burger"></span>
-          <button class="header__burger">Каталог</button>
+          <button class="header__burger">
+            <span class="header__icon-burger">
+              <img src="@/assets/pictures/burger.svg">
+            </span> Каталог</button>
 
           <ul class="header__list">
             <li class="header__item">
@@ -58,11 +60,12 @@
             <a class="header__social-icon" href="#">
               <img class="header__instagram-icon" src="@/assets/pictures/instagram-icon.svg">
             </a>
-            <a class="header__social-icon" href="#">
-              <img class="header__vk-icon" src="@/assets/pictures/vk-icon.svg">
+            <a class="header__social-icon header__social-icon--position" href="#">
+              <img class="header__vk-icon" src="../../assets/pictures/vk-icon.svg">
+              <img class="header__vk" src="../../assets/pictures/vk.svg">
             </a>
             <a class="header__social-icon" href="#">
-              <img class="header__facebook-icon" src="../../assets/pictures/facebook-icon.svg">
+              <img class="header__facebook-icon" src="@/assets/pictures/facebook-icon.svg">
             </a>
           </div>
 
@@ -315,10 +318,17 @@ export default {
     }
 
     &__burger {
+      display: flex;
+      align-items: center;
       padding: 0;
-      width: 92px;
+      width: 120px;
+      height: 100%;
+
+      box-sizing: border-box;
+      padding-left: 15px;
 
       color: #2A2A2A;
+      text-align: end;
 
       font-family: "trebuchetms";
       font-weight: 700;
@@ -327,43 +337,26 @@ export default {
       background: inherit;
       outline: none;
       border: none;
+      margin-right: 15px;
 
       cursor: pointer;
     }
 
     &__icon-burger {
-      position: relative;
       display: block;
-      margin-right: 10px;
-      height: 2px;
-      width: 19px;
-      background: #2A2A2A;
-
-      &::before,
-      &::after {
-        position: absolute;
-        content: "";
-        top: 0;
-        left: 0;
-        height: 2px;
-        width: 16px;
-        background: #2A2A2A;
-      }
-
-      &::before {
-        top: 5px;
-      }
-
-      &::after {
-        top: -5px;
-      }
-
+      margin-right: 15px;
+      height: 20px;
+      width: 20px;
+      padding-top: 4px;
     }
+
+
 
     &__list {
       display: flex;
       justify-content: space-evenly;
       width: 100%;
+      height: 100%;
       margin: auto;
       align-items: center;
       padding: 0;
@@ -377,32 +370,42 @@ export default {
     }
 
     &__item-link {
+      display: flex;
+      align-items: center;
+      margin-right: 15px;
+      height: 52px;
       text-decoration: none;
       color: #2A2A2A;
     }
 
     &__social {
       display: flex;
-      justify-content: space-between;
       align-items: center;
       width: 100px;
-      height: 24px;
-      padding-top: 6px;
+      height: 100%;
     }
 
-    &__instagram-icon {
-      width: 22px;
-      height: 22px;
+    &__social-icon {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      width: 30x;
+      height: 30px;
+
+      &--position {
+        position: relative;
+      }
     }
 
     &__vk-icon {
-      width: 24px;
-      height: 24px;
+      text-align: center;
+      margin: 0 6px;
     }
 
-    &__facebook-icon {
-      width: 23px;
-      height: 23px;
+    &__vk {
+      position: absolute;
+      top:11px;
+      left: 11px;
     }
 
 
