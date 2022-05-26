@@ -2,13 +2,14 @@
   <main class="greetings">
     <banner-on-main />
     <catalog-on-main />
+    
   </main>
 </template>
 
 <script>
   import bannerOnMain from '@/components/bannerOnMain.vue'
   import CatalogOnMain from '@/components/CatalogOnMain.vue'
-
+  import moreInfoOnMain from '@/components/moreInfoOnMain.vue'
   
 
   export default {
@@ -21,7 +22,7 @@
     components: {
       bannerOnMain,
       CatalogOnMain,
-    
+      moreInfoOnMain
     }
   }
 
