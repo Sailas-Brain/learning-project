@@ -2,12 +2,14 @@
   <main class="greetings">
     <banner-on-main />
     <catalog-on-main />
+    <event-on-main />
   </main>
 </template>
 
 <script>
   import bannerOnMain from '@/components/bannerOnMain.vue'
   import CatalogOnMain from '@/components/CatalogOnMain.vue'
+  import EventOnMain from '@/components/EventOnMain.vue'
   
 
   export default {
@@ -20,6 +22,7 @@
     components: {
       bannerOnMain,
       CatalogOnMain,
+      EventOnMain
       
     }
   }
