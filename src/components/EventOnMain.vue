@@ -32,6 +32,7 @@
 
         </div>
       </div>  
+      <link-button class="events__button" href="#">Показать еще</link-button>  
     </div>
 </template>
 
@@ -49,6 +50,7 @@
 
   .events {
     width: 100%;
+    margin-top: 85px;
 
     &__title {
       @include title-h2 ();
@@ -88,14 +90,19 @@
 
     &__description {
       position: absolute;
-      bottom: 0;
+      bottom: 2px;
       left: 0;
       max-height: 119px;
       background: #2A2A2A;
       opacity: 0.79;
       border-radius: 0px 0px 9px 9px;
       color: #fff;
-      
+
+      font-family: "trebuchetms";
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+
     }
 
     &__wrap-info {
@@ -113,10 +120,27 @@
       width: 100%;
     }
 
+    &__title-description {
+      font-weight: 700;
+      font-size: 19px;
+
+      color: #F9A43F;
+    }
+
     &__text {
       margin-bottom: 22px;
     }
 
+    &__button {
+      width: 311px;
+      height: 71px;
+      font-family: "trebuchetms";
+      font-weight: 700;
+      font-size: 23px;
+      line-height: 27px;
+
+      margin: 38px auto;
+    }
 
 
 
