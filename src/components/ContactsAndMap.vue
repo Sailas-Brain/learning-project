@@ -43,21 +43,11 @@
 
         </div>
 
-
-
         <div class="contacts__map-wrap">
           <div class="contacts__map" style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;outline:none;">Москва</a><a href="https://yandex.ru/maps/213/moscow/house/maly_drovyanoy_pereulok_6/Z04YcAJoSUAHQFtvfXt1d39kYQ==/?from=tabbar&ll=37.658051%2C55.746375&source=serp_navig&utm_medium=mapframe&utm_source=maps&z=17.13" style="color:#eee;font-size:12px;position:absolute;top:14px;">Малый Дровяной переулок, 6 — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCUJYVAkPC" width="100%" height="629" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
         </div>
-
-
-
-
       </div>
-
-
-
     </div>
-      
 
   </div>
 </template>
@@ -72,10 +62,6 @@
 
 <style lang="scss" scoped>
 
-  * {
-    margin: 0;
-    padding: 0;
-  }
   .contacts {
     width: 100%;
 

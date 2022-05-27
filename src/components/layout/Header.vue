@@ -189,10 +189,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  * {
-    padding: 0;
-    margin: 0;
-  }
+
   .header {
     position: relative;
     max-width: 100%;

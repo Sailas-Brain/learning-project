@@ -31,10 +31,6 @@
 
 <style lang="scss" scoped>
 
-* {
-  padding: 0;
-  margin: 0;
-}
   .card {
     margin: 50px auto;
     width: 255px;
