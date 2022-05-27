@@ -3,31 +3,31 @@
         <h2 class="catalog__title">Каталог</h2>
         <div class="catalog__wrapper">
             <div class="catalog__inner catalog__inner--one">
-                <img src="@/assets/images/image 6.jpg" alt="">
+                <img src="@/assets/images/tabel-games_catalog.jpg" alt="">
                 <div class="catalog__category">
                     <p>Настольные игры</p>
                 </div>
             </div>
             <div class="catalog__inner catalog__inner--two">
-                <img src="@/assets/images/pasha-statkevich-pinkymarmalade-wot-console-artwork-fin-2000 1.jpg" alt="">
+                <img src="@/assets/images/wargames_catalog.jpg" alt="">
                 <div class="catalog__category">
                     <p>Варгеймы</p>
                 </div>
             </div>
             <div class="catalog__inner catalog__inner--three">
-                <img src="@/assets/images/image 5.jpg" alt="">
+                <img src="@/assets/images/paints_catalog.jpg" alt="">
                 <div class="catalog__category">
                     <p>Краски</p>
                 </div>
             </div>
             <div class="catalog__inner catalog__inner--four">
-                <img src="@/assets/images/image 4.jpg" alt="">
+                <img src="@/assets/images/magic-cathering_catalog.jpg" alt="">
                 <div class="catalog__category">
                     <p>Magic:the Cathering</p>
                 </div>
             </div>
             <div class="catalog__inner catalog__inner--five">
-                <img src="@/assets/images/image 7.jpg" alt="">
+                <img src="@/assets/images/all-catalog_catalog.jpg" alt="">
                 <div class="catalog__category">
                     <p>Весь каталог</p>
                 </div>

@@ -2,7 +2,7 @@
   <div class="banner">
     <splide :options="options">
     <splide-slide>
-      <img class="banner__img" src="@/assets/images/Rectangle 13.jpg">
+      <img class="banner__img" src="@/assets/images/magic-cathering_banner.jpg">
       <div class="banner__wrap">
         <div class="banner__discription">
           <div class="banner__text">
@@ -16,7 +16,7 @@
       </div>
     </splide-slide>
     <splide-slide>
-      <img class="banner__img" src="@/assets/images/Rectangle 13.jpg">
+      <img class="banner__img" src="@/assets/images/magic-cathering_banner.jpg">
       <div class="banner__wrap">
         <div class="banner__discription">
           <div class="banner__text">
@@ -30,7 +30,7 @@
       </div>
     </splide-slide>
     <splide-slide>
-      <img class="banner__img" src="@/assets/images/Rectangle 13.jpg">
+      <img class="banner__img" src="@/assets/images/magic-cathering_banner.jpg">
       <div class="banner__wrap">
         <div class="banner__discription">
           <div class="banner__text">
