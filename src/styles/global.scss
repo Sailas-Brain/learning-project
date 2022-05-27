@@ -3,6 +3,14 @@
 @import 'variables/colors';
 @import 'variables/fonts';
 
+@mixin title-h2 () {
+  font-family: "trebuchetms";
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 37px;
+  
+  color: #363636;
+}
 
 * {
   padding: 0;

@@ -2,6 +2,7 @@
   <main class="greetings">
     <banner-on-main />
     <catalog-on-main />
+    <event-on-main />
     <info-shop-on-main />
     <contacts-and-map />
   </main>
@@ -10,6 +11,7 @@
 <script>
   import bannerOnMain from '@/components/bannerOnMain.vue'
   import CatalogOnMain from '@/components/CatalogOnMain.vue'
+  import EventOnMain from '@/components/EventOnMain.vue'
   import InfoShopOnMain from '@/components/InfoShopOnMain.vue'
   import ContactsAndMap from '@/components/ContactsAndMap.vue'
   
@@ -23,6 +25,7 @@
     components: {
       bannerOnMain,
       CatalogOnMain,
+      EventOnMain
       InfoShopOnMain
       ContactsAndMap
     }
