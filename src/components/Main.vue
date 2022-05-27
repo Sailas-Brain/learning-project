@@ -3,6 +3,9 @@
     <banner-on-main />
     <catalog-on-main />
     <more-info-on-main />
+    <event-on-main />
+    <info-shop-on-main />
+    <contacts-and-map />
   </main>
 </template>
 
@@ -10,9 +13,10 @@
   import bannerOnMain from '@/components/bannerOnMain.vue'
   import CatalogOnMain from '@/components/CatalogOnMain.vue'
   import moreInfoOnMain from '@/components/moreInfoOnMain.vue'
+  import EventOnMain from '@/components/EventOnMain.vue'
+  import InfoShopOnMain from '@/components/InfoShopOnMain.vue'
+  import ContactsAndMap from '@/components/ContactsAndMap.vue'
   
-  
-
   export default {
     props: {
       msg: {
@@ -24,6 +28,9 @@
       bannerOnMain,
       CatalogOnMain,
       moreInfoOnMain,
+      EventOnMain
+      InfoShopOnMain
+      ContactsAndMap
     }
   }
 
