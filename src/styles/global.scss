@@ -2,3 +2,9 @@
 @import "mixins/media.scss";
 @import 'variables/colors';
 @import 'variables/fonts';
+
+
+* {
+  padding: 0;
+  margin: 0;
+}

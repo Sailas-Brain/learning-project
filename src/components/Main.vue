@@ -2,12 +2,14 @@
   <main class="greetings">
     <banner-on-main />
     <catalog-on-main />
+    <contacts-and-map />
   </main>
 </template>
 
 <script>
   import bannerOnMain from '@/components/bannerOnMain.vue'
   import CatalogOnMain from '@/components/CatalogOnMain.vue'
+  import ContactsAndMap from '@/components/ContactsAndMap.vue'
 
   
 
@@ -21,6 +23,7 @@
     components: {
       bannerOnMain,
       CatalogOnMain,
+      ContactsAndMap
     
     }
   }
