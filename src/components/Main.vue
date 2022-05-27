@@ -28,9 +28,9 @@
       bannerOnMain,
       CatalogOnMain,
       moreInfoOnMain,
-      EventOnMain
-      InfoShopOnMain
-      ContactsAndMap
+      EventOnMain,
+      InfoShopOnMain,
+      ContactsAndMap,
     }
   }
 
