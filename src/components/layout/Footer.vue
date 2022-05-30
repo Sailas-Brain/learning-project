@@ -102,6 +102,12 @@ a {
     &__top {
       border-bottom: 1px solid rgba(255, 255, 255, 0.25);
       padding-top: 30px;
+
+      @media (max-width: 770px) { 
+        display: flex;
+        margin: 0 auto;
+        border: none;
+      }
     }
 
 
@@ -112,12 +118,35 @@ a {
       justify-content: space-between;
 
       &--align {
+        display: flex;
         align-items: center;
+        margin: 0 auto;
+
+        @media (max-width: 790px) {
+          display: block;
+          text-align: center;
+          margin: 0px auto;
+        }
+
+      }
+
+      @media (max-width: 1150px) { 
+        padding: 0px 20px;
+      }
+      @media (max-width: 960px) { 
+        flex-wrap: wrap;
+        margin: 20px auto;
+      }
+      @media (max-width: 770px) { 
+        display: block;
+        text-align: center;
+        margin: 0px auto;
       }
     }
 
     &__logo {
       max-width: 214px;
+      margin: 0 8px;
 
       p {
         font-family: "trebuchetms";
@@ -125,10 +154,20 @@ a {
         font-size: 16px;
         line-height: 19px;
       }
+
+      @media (max-width: 770px) { 
+        margin-bottom: 13px;
+      }
+
     }
 
     &__catalog {
       max-width: 152px;
+      margin: 0 8px;
+
+      @media (max-width: 770px) { 
+        max-width: 100%;
+      }
     }
 
     &__catalog-link {
@@ -161,10 +200,19 @@ a {
 
     &__catalog-list {
       list-style: none;
+
+      @media (max-width: 770px) { 
+        display: none;
+      }
     }
 
     &__rules {
       max-width: 137px;
+      margin: 0 8px;
+
+      @media (max-width: 770px) { 
+        max-width: 100%;
+      }
     }
     
     &__rules-list {
@@ -186,6 +234,7 @@ a {
 
     &__delivery {
       max-width: 179px;
+      margin: 0 8px;
 
       a {
         display: block;
@@ -200,6 +249,10 @@ a {
           transition: all 0.3s ease;
         }
       }
+
+      @media (max-width: 770px) { 
+        display: none;
+      }
     }
 
     &__request {
@@ -212,11 +265,19 @@ a {
       a {
         display: block;
         margin-bottom: 10px;
+
+        &:hover,
+        &:focus {
+          color: #F9A43F;
+          transition: all 0.3s ease;
+        }
       }
 
-    
+      @media (max-width: 960px) { 
+        margin: 15px auto 0px;
+        text-align: center;
+      }
     }
-
 
     &__button {
       width: 225px;
@@ -238,17 +299,16 @@ a {
         background-color: #F9A43F ;
         transition: all 0.3s ease;
       }
+
+      @media (max-width: 960px) { 
+        display: none;
+      }
     }
 
-    &__request {
-      a {
-        &:hover,
-        &:focus {
-          color: #F9A43F;
-          transition: all 0.3s ease;
+    .social {
+      @media (max-width: 960px) { 
+        margin: 0 auto;
       }
-      }
-
     }
 
     &__social {
@@ -263,16 +323,22 @@ a {
           background-color: #F9A43F ;
           transition: all 0.3s ease;
         }
-
       }
     }
 
-
     &__bottom {
-        padding: 20px 0;
+      padding: 20px 0;
+
+      @media (max-width: 790px) { 
+        display: flex;
+        margin: 0 auto;
+        padding-top: 0px;
+      }
     }
 
     &__confidential {
+
+      
 
       p {
         font-family: "trebuchetms";
@@ -296,7 +362,9 @@ a {
           color: #F9A43F;
           transition: all 0.3s ease;
         }
-
+      }
+      @media (max-width: 790px) { 
+        margin: 10px auto;
       }
 
     }
@@ -306,6 +374,11 @@ a {
       height: 17px;
       display: flex;
       justify-content: space-between;
+      margin: 15px auto;
+
+      @media (max-width: 790px) { 
+        display: none;
+      }
     }
 
     &__offer {
@@ -330,16 +403,17 @@ a {
         color: rgba(255, 255, 255, 0.44);
         text-decoration: underline;
         
-        
         &:hover {
           color: #F9A43F;
           transition: all 0.3s ease;
         }
       }
+
+      @media (max-width: 790px) { 
+        text-align: center;
+        text-decoration: none;
+      }
     }
-
-
-
   }
 
 </style>
