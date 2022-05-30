@@ -44,20 +44,14 @@
 </script>
 
 <style lang="scss" scoped>
-  * {
-    padding: 0;
-    margin: 0;
-  }
+
   .information {
     width: 1110px;
     margin: 85px auto;
 
     &__title {
-      font-family: "trebuchetms";
-      font-weight: 700;
-      font-size: 32px;
-      line-height: 37px;
-      color: #363636;
+      @include title-h2 ();
+
       margin-bottom: 21px;
     }
 
@@ -128,12 +122,21 @@
       font-size: 23px;
       line-height: 68px;
       color: #F9A43F;
-      transition: background-color .2s linear;
+
+      transition: color .3s 
+      ease-in-out, background-color .3s 
+      ease-in-out, border-color .3s 
+      ease-in-out, box-shadow .3s 
+      ease-in-out;
+
+      // transition: background-color .2s linear;
 
       &:hover,
       &:focus {
+        border: 3px solid #FB791B;
         color: #FFFFFF;
-        background-color: #F9A43F ;
+        background-color: #ffc107;
+        background: linear-gradient(0.53deg, #FF6C00, #F9A43F, #FB791B);
       }
     }
   }

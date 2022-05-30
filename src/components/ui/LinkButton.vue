@@ -7,7 +7,10 @@
 
 <script>
 export default {
-  name: 'link-button'
+  name: 'link-button',
+  props: {
+    
+  }
 }
 </script>
 
