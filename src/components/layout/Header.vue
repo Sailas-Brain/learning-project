@@ -56,18 +56,8 @@
             </li>
           </ul>
 
-          <div class="header__social">
-            <a class="header__social-icon" href="#">
-              <img class="header__instagram-icon" src="@/assets/pictures/instagram-icon.svg">
-            </a>
-            <a class="header__social-icon header__social-icon--position" href="#">
-              <img class="header__vk-icon" src="../../assets/pictures/vk-icon.svg">
-              <img class="header__vk" src="../../assets/pictures/vk.svg">
-            </a>
-            <a class="header__social-icon" href="#">
-              <img class="header__facebook-icon" src="@/assets/pictures/facebook-icon.svg">
-            </a>
-          </div>
+          <icon-social />
+          
 
           <div class="header__container-menu">
             <div class="header__menu">
@@ -164,8 +154,11 @@
 
 
 <script>
-export default {
 
+import IconSocial from '../IconSocial.vue'
+
+export default {
+  components: { IconSocial },
 
 }
 </script>
@@ -390,35 +383,7 @@ export default {
       }
     }
 
-    &__social {
-      display: flex;
-      align-items: center;
-      width: 100px;
-      height: 100%;
-    }
 
-    &__social-icon {
-      display: flex;
-      align-items: center;
-      text-align: center;
-      width: 30x;
-      height: 30px;
-
-      &--position {
-        position: relative;
-      }
-    }
-
-    &__vk-icon {
-      text-align: center;
-      margin: 0 6px;
-    }
-
-    &__vk {
-      position: absolute;
-      top:11px;
-      left: 11px;
-    }
 
 
 
