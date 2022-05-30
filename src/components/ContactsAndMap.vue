@@ -4,43 +4,30 @@
       <h2 class="contacts__title">Контакты</h2>
       <div class="contacts__info-wrap">
         <div class="contacts__information">
-          <div class="contacts__details">
-            <img class="contacts__icon" src="@/assets/pictures/contacts__phone.svg">
-            <p class="contacts__text">Телефон:</p>
-            <a class="contacts__link" href="#">+7 (495) 911-10-11</a>
+          <div class="contacts__information-inner">
+            <div class="contacts__details">
+              <img class="contacts__icon" src="@/assets/pictures/contacts__phone.svg">
+              <p class="contacts__text">Телефон:</p>
+              <a class="contacts__link" href="#">+7 (495) 911-10-11</a>
+            </div>
+            <div class="contacts__details">
+              <img class="contacts__icon" src="@/assets/pictures/contacts__email-icon.svg">
+              <p class="contacts__text">E-mail:</p>
+              <a class="contacts__link" href="#">msk@magicgoldfish.ru</a>
+            </div>
+
+            <div class="contacts__details">
+              <img class="contacts__icon contacts__icon--marker" src="../assets/pictures/contacts__address-icon.svg">
+              <p class="contacts__text">Адрес:<span class="contacts__address-text">г. Москва ст.м. Таганская (кольцевая) Малый Дровяной переулок 6</span></p>
+              
+            </div>
+            <div class="contacts__details">
+              <img class="contacts__icon" src="../assets/pictures/contacts__working-time-icon.svg">
+              <p class="contacts__text">Режим работы клуба:</p>
+              <span class="contacts__address-text">11:00-23:00 (ежедневно)</span>
+            </div>
           </div>
-          <div class="contacts__details">
-            <img class="contacts__icon" src="@/assets/pictures/contacts__email-icon.svg">
-            <p class="contacts__text">E-mail:</p>
-            <a class="contacts__link" href="#">msk@magicgoldfish.ru</a>
-          </div>
-
-          <div class="contacts__details">
-            <img class="contacts__icon contacts__icon--marker" src="../assets/pictures/contacts__address-icon.svg">
-            <p class="contacts__text">Адрес:<span class="contacts__address-text">г. Москва ст.м. Таганская (кольцевая) Малый Дровяной переулок 6</span></p>
-            
-          </div>
-          <div class="contacts__details">
-            <img class="contacts__icon" src="../assets/pictures/contacts__working-time-icon.svg">
-            <p class="contacts__text">Режим работы клуба:</p>
-            <span class="contacts__address-text">11:00-23:00 (ежедневно)</span>
-          </div>
-
-          <form class="contacts__form">
-            <p class="contacts__form-title">Остались вопросы?</p>
-            <label class="contacts__name-input" for="name">Ваше имя</label>
-            <input class="contacts__input-field" id="name" type="text" placeholder="Имя">
-
-            <label class="contacts__name-input" for="phone">Ваш телефон</label>
-            <input class="contacts__input-field" id="phone" type="text" placeholder="+7 ___ _______">
-
-            <label class="contacts__name-input" for="comments">Ваш комментарий</label>
-            <textarea class="contacts__input-field contacts__input-field--comments" id="comments" type="text" placeholder="Комментарий"></textarea>
-
-            <button class="contacts__form-button" type="submit">Заказать звонок</button>
-            <p class="contacts__form-text">Нажимая на кнопку "Заказать звонок", я даю <a class="contacts__form-link" href="#">согласие на обработку персональных данных.</a></p>
-          </form>
-
+          <call-order-form />
         </div>
 
         <div class="contacts__map-wrap">
@@ -53,8 +40,10 @@
 </template>
 
 <script>
+import CallOrderForm from './ui/CallOrderForm.vue'
 
   export default {
+  components: { CallOrderForm },
     name: "contacts-and-map"
   }
 
@@ -70,6 +59,12 @@
       margin: 0 auto;
     }
 
+    &__title {
+      @include title-h2 ();
+
+      margin-bottom: 11px;
+    }
+
     &__info-wrap {
       display: flex;
       justify-content: space-between;
@@ -77,6 +72,10 @@
 
     &__information {
       width: 41%;
+    }
+
+    &__information-inner {
+      margin-bottom: 30px;
     }
 
     &__details {
@@ -115,133 +114,13 @@
       line-height: 20px;
 
       margin-left: 8px;
-      color: #2A2A2A;
+      color: $--color-main;
 
       &:hover,
       &:focus {
-        color: #F9A43F;
+        color: $--color-activ;
       }
     }
-
-    &__form {
-      margin-top: 35px;
-    }
-
-    &__form-title {
-      font-family: "trebuchetms";
-      font-weight: 700;
-      font-size: 22px;
-      line-height: 26px;
-
-      color: #2A2A2A;
-      margin-bottom: 21px;
-    }
-
-    &__address-text {
-      font-family: "trebuchetms";
-      font-weight: 400;
-      font-size: 17px;
-      line-height: 20px;
-
-      margin-left: 8px;
-    }
-
-    &__name-input {
-      font-family: "trebuchetms";
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 19px;
-
-      color: #2A2A2A;
-      margin-bottom: 7px;
-    }
-
-    &__input-field {
-      width: 100%;
-      height: 44px;
-      opacity: 0.33;
-      border: 1px solid #2A2A2A;
-      border-radius: 9px;
-      box-sizing: border-box;
-
-      padding-left: 19px;
-      margin-top: 7px;
-      margin-bottom: 14px;
-
-      font-family: "trebuchetms";
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 19px;
-
-      color: #2A2A2A;
-
-      opacity: 0.33;
-
-      &--comments {
-        min-height: 88px;
-        padding-top: 14px;
-      }
-    }
-
-    &__form-button {
-      width: 100%;
-      height: 46px;
-
-      // background: linear-gradient(184.53deg, #F9A43F 5.27%, #FB791B 91.78%);
-      border-top: 1px solid silver;
-      // background-color: #555;
-      color: #ccc;
-      background: linear-gradient(0.53deg, #FF6C00, #F9A43F, #FB791B);
-      background-size: 100% 140%;
-      background-position:0 100%;
-      transition: background 1s ease;
-      border-radius: 9px;
-      border: 0;
-      outline: 0;
-
-      font-family: "trebuchetms";
-      font-weight: 700;
-      font-size: 19px;
-      line-height: 22px;
-
-      color: #FFFFFF;
-      cursor: pointer;
-
-      &:hover,
-      &:focus {
-         background-position:0 0;
-        // background: linear-gradient(184.53deg, #fffffF 5.27%, #000000 91.78%);
-        // transition: ba;
-      }
-    }
-
-    &__form-text {
-      margin-top: 15px;
-      font-family: "trebuchetms";
-      font-weight: 400;
-      font-size: 15px;
-      line-height: 91.1%;
-      color: #000000;
-
-      opacity: 0.68;
-    }
-
-    &__form-link {
-      font-family: "trebuchetms";
-      font-weight: 400;
-      font-size: 15px;
-      line-height: 122.1%;
-      color: #000000;
-
-      opacity: 0.68;
-
-      &:hover,
-      &:focus {
-        color: #EC690A;
-      }
-
-    }
-
 
     &__map-wrap {
       width: 49%;

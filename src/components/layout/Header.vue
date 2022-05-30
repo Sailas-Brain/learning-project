@@ -72,8 +72,11 @@
           <div class="header__container-menu">
             <div class="header__menu">
               <div class="header__category">                
-                <button class="header__button-close">Все категории</button>
+                <button class="header__button-close">Закрыть</button>
                 <ul class="header__list-category">
+                  <li class="header__item">
+                    <a class="header__catalog-link">Все категории</a>
+                  </li>
                   <li class="header__item">
                     <a class="header__catalog-link">Настольные игры</a>
                   </li>
@@ -174,7 +177,7 @@ export default {
     max-width: 100%;
 
     &__top-wrap {
-      background: #2A2A2A;
+      background: $--color-main;
       width: 100%;
       height: 82px;
       padding: 0 25px;
@@ -252,7 +255,7 @@ export default {
       box-sizing: border-box;
       padding-left: 35px;
 
-      background-image: url(../../assets/pictures/phone-icon.svg);
+      background-image: url(@/assets/pictures/phone-icon.svg);
       background-repeat: no-repeat;
     }
 
@@ -271,7 +274,7 @@ export default {
     &__link-registration {
       width: 31px;
       height: 31px;
-      background-color: #2A2A2A;
+      background-color: $--color-main;
       border: none;
       outline: none;
       cursor: pointer;
@@ -324,7 +327,7 @@ export default {
       box-sizing: border-box;
       padding-left: 15px;
 
-      color: #2A2A2A;
+      color: $--color-main;
       text-align: end;
 
       font-family: "trebuchetms";
@@ -337,6 +340,12 @@ export default {
       margin-right: 15px;
 
       cursor: pointer;
+
+      &:hover,
+      &:focus {
+        color: $--color-activ;
+        transition: color 0.2s ease;
+      }
     }
 
     &__icon-burger {
@@ -372,7 +381,13 @@ export default {
       margin-right: 15px;
       height: 52px;
       text-decoration: none;
-      color: #2A2A2A;
+      color: $--color-main;
+
+      &:hover,
+      &:focus {
+        color: $--color-activ;
+        transition: color 0.2s ease;
+      }
     }
 
     &__social {
@@ -421,8 +436,8 @@ export default {
     &__menu {
       display: flex;
       margin: 0 auto;
-      max-width: 1109px;
-      min-height: 390px;
+      max-width: 1110px;
+      min-height: 435px;
       background: #FFFBF8;
       margin-top: 82px;
       
@@ -450,6 +465,7 @@ export default {
       padding-left: 10px;
       cursor: pointer;
 
+      /*крестик для закрытия меню*/ 
       &::before,
       &::after {
         position: absolute;
@@ -459,7 +475,7 @@ export default {
 
         height: 2px;
         width: 17px;
-        background: #2A2A2A;
+        background: $--color-main;
 
       }
 
@@ -472,7 +488,6 @@ export default {
       }
 
     }
-
 
     &__catalog-link {
       position: relative;
@@ -505,16 +520,20 @@ export default {
         transform: rotate(45deg);
       }
 
+
       &:focus,
       &:hover {
-        background: #F9A43F;
+        background: $--color-activ;
+        transition: background 0.3s ease;
 
         &::after {
-          border-top: 2px solid #2A2A2A;
-          border-right: 2px solid #2A2A2A;
+          border-top: 2px solid $--color-main;
+          border-right: 2px solid $--color-main;
         }
       }
     }
+
+
 
     &__catalog-product {
       width: 864px;
@@ -550,9 +569,14 @@ export default {
       width: 100%;
       height: 40px;
       line-height: 249.6%;
-      // padding-right: 25px;
       white-space: nowrap;
       cursor: pointer;
+
+      &:hover,
+      &:focus {
+        color: $--color-activ;
+        transition: color 0.2s ease;
+      }
     }
 
   }

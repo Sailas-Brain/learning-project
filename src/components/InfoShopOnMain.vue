@@ -23,10 +23,6 @@
 
 <style lang="scss" scoped>
 
-    * {
-      margin: 0;
-      padding: 0;
-    }
     .shop {
       display: flex;
       justify-content: space-between;
@@ -38,10 +34,8 @@
       }
 
       &__title {
-        font-family: "trebuchetms";
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 37px;
+        @include title-h2 ();
+        
         margin-bottom: 21px;
       }
 

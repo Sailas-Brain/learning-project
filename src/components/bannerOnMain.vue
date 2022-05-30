@@ -10,7 +10,12 @@
             <p class="banner__game">Magic: the Gathering</p>
           </div>
           <div class="banner__link">
-            <link-button class="banner__more" href="#">Подробнее</link-button>
+            <link-button
+              :addClass="true"
+              :link="true"
+            >
+            Подробнее
+          </link-button>
           </div>
         </div>
       </div>
@@ -81,8 +86,6 @@ export default {
 </script>
 
 <style lang="scss" >
-
-
   .splide__arrow {
     top: 160px;
   }
@@ -108,6 +111,7 @@ export default {
       flex-wrap: wrap;
       width: 90%;
       margin: auto;
+      margin-bottom: 30px;
       align-items: center;
     }
 
@@ -117,7 +121,7 @@ export default {
       font-weight: 400;
       font-size: 14px;
       line-height: 16px;
-      color: #FFFFFF;
+      color: $--color-white;
     }
 
     &__game {
@@ -126,9 +130,13 @@ export default {
       font-weight: 700;
       font-size: 28px;
       line-height: 33px;
-      color: #FFFFFF;
+      color: $--color-white;
     }
 
+    &__link {
+      // @include basic-button-link ();
+
+    }
 
 
   }

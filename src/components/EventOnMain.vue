@@ -43,10 +43,6 @@
 </script>
 
 <style lang="scss" scoped>
-  * {
-    margin: 0;
-    padding: 0;
-  }
 
   .events {
     width: 100%;
@@ -68,12 +64,16 @@
       justify-content: space-between;
       width: 100%;
       max-height: 394px;
+      margin-bottom: 38px;
 
     }
 
     &__article {
       position: relative;
       width: 48.5%;
+      
+      /* тень карточки */
+      filter: drop-shadow(5px 6px 16px rgba(42, 42, 42, 0.16));
     }
 
     &__halloween {
@@ -90,13 +90,13 @@
 
     &__description {
       position: absolute;
-      bottom: 2px;
+      bottom: 0px;
       left: 0;
       max-height: 119px;
-      background: #2A2A2A;
+      background: $--color-main;
       opacity: 0.79;
       border-radius: 0px 0px 9px 9px;
-      color: #fff;
+      color: $--color-white;
 
       font-family: "trebuchetms";
       font-weight: 400;
@@ -124,7 +124,7 @@
       font-weight: 700;
       font-size: 19px;
 
-      color: #F9A43F;
+      color: $--color-activ;
     }
 
     &__text {
@@ -132,6 +132,9 @@
     }
 
     &__button {
+
+      @include basic-button-link ();
+
       width: 311px;
       height: 71px;
       font-family: "trebuchetms";
@@ -139,19 +142,8 @@
       font-size: 23px;
       line-height: 27px;
 
-      margin: 38px auto;
+      margin: 0 auto;
     }
-
-
-
-
-
-
-
-
-
   }
-
-
 
 </style>

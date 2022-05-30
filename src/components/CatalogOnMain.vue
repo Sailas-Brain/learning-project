@@ -53,11 +53,8 @@
     margin-top: 45px;
 
     &__title {
-      font-family: "trebuchetms";
-      font-weight: 700;
-      font-size: 32px;
-      line-height: 37px;
-      color: #363636;
+      @include title-h2 ();
+
       margin-bottom: 22px;
       margin-top: 0;
     }
@@ -103,7 +100,7 @@
         grid-area: e;
         
         p {
-          color: #F9A43F;
+          color: $--color-activ;
         }
       }
 
@@ -123,7 +120,7 @@
       font-weight: 700;
       font-size: 18px;
       line-height: 46px;
-      color: #FFFFFF;
+      color: $--color-white;
       background: linear-gradient(180deg, #2A2A2A 0%, #2A2A2A 100%);
       border-radius: 0px 0px 9px 9px;
 
