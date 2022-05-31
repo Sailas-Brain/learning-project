@@ -51,28 +51,55 @@
     max-width: 1110px;
     margin: 0 auto;
     margin-top: 45px;
+    
+    box-sizing: border-box;
 
     &__title {
       @include title-h2 ();
-
       margin-bottom: 22px;
       margin-top: 0;
+
+      @media (max-width: 1160px) {
+        margin: 0 20px;
+        margin-bottom: 22px;
+      }
+      @media (max-width: 600px) {
+        font-size: 21px;
+        line-height: 24px;
+      }
     }
 
     &__wrapper {
-     
+
+      box-sizing: border-box;
       display: grid;
-        grid-auto-flow: column;
-        grid-template-areas: "a a b c" "a a d e";
-        grid-gap: 30px;
-        grid-row-gap: 1em;
+      grid-auto-flow: column;
+      grid-template-areas: "a a b c" "a a d e";
+      grid-gap: 30px;
+      grid-row-gap: 1em;
+      
+
+      @media (max-width: 1120px) {
+        grid-template-areas: "a a" "b c" "d e";
+        margin: 0 60px;
+        
+      }
+      @media (max-width: 600px) {
+        display: block;
+        margin: 0 20px;
+        
+      }
     }
 
     &__inner {
       position: relative;
-      width: 255px;
-      height: 175px;
+      min-width: 255px;
+      height: auto;
       filter: drop-shadow(5px 6px 16px rgba(42, 42, 42, 0.16));
+
+      @media (max-width: 600px) {
+        margin: 20px 0;
+      }
 
       img {
         width: 100%;
@@ -99,14 +126,16 @@
       &--five {
         grid-area: e;
         
-        p {
-          color: $--color-activ;
-        }
       }
 
       &:first-child {
-        width: 540px;
+        max-width: 540px;
         height: 380px;
+
+        @media (max-width: 1100px) {
+          max-width: 100%;
+          height: auto;
+        }
       }
 
     }
@@ -115,7 +144,7 @@
       position: absolute;
       bottom: 0;
       width: 100%;
-      height: 46px;
+      height: 50px;
       font-family: "trebuchetms";
       font-weight: 700;
       font-size: 18px;
@@ -127,6 +156,12 @@
       p {
         margin: 0;
         margin-left: 20px;
+
+        &:hover,
+        &:focus {
+          color: $--color-activ;
+          transition: color 0.2s ease;
+        }
 
       }
 
