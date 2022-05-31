@@ -1,14 +1,17 @@
 <template>
   <div class="shop">
-    <div class="shop__info">
-      <h2 class="shop__title">Об игровом центре «GoldFish»</h2>
-      <p class="shop__text">«GoldFish»- магазин, в котором Вы можете купить отличный подарок как для себя, так и для своих близких.</p>
-      <p class="shop__text"> В ассортименте нашего магазина представлены тысячи настольных игр на любой вкус: простые и посложнее, семейные и только для взрослых, для двоих и для больших компаний, детективные и логические, ролевые и стратегические настолки. «GoldFish» также  регулярно проводит собственные игротеки:турниры по Magic: the Gathering (от компании Wizards of the coast) и Warhammer (от Games Workshop).</p>
-      <p class="shop__text">В нашем магазине можно найти нужные аксессуары для любимых игр (протекторы для карт и коллекций), инструменты для самостоятельного оформления и покраски фигурок (кейсы, подставки, краски Vallejo и др.) и многое другое.</p>
-      <p class="shop__text">«GoldFish» - это не только магазин настольных игр, но и полноценный хобби-центр. Здесь можно арендовать столы для игр с друзьями, проходить обучение и мастер-классы по интересующим тебя играм, заводить новые знакомства и приобщаться к игровому комьюнити!</p>
-    </div>
-    <div class="shop__photo">
-      <img class="shop__img" src="@/assets/images/store-on-main.jpg" alt="">
+    <h2 class="shop__title">Об игровом центре <span>«GoldFish»</span></h2>
+    <div class="shop__wrapp">
+      <div class="shop__info">
+        <p class="shop__text">«GoldFish»- магазин, в котором Вы можете купить отличный подарок как для себя, так и для своих близких.</p>
+        <p class="shop__text"> В ассортименте нашего магазина представлены тысячи настольных игр на любой вкус: простые и посложнее, семейные и только для взрослых, для двоих и для больших компаний, детективные и логические, ролевые и стратегические настолки. «GoldFish» также  регулярно проводит собственные игротеки:турниры по Magic: the Gathering (от компании Wizards of the coast) и Warhammer (от Games Workshop).</p>
+        <p class="shop__text">В нашем магазине можно найти нужные аксессуары для любимых игр (протекторы для карт и коллекций), инструменты для самостоятельного оформления и покраски фигурок (кейсы, подставки, краски Vallejo и др.) и многое другое.</p>
+        <p class="shop__text">«GoldFish» - это не только магазин настольных игр, но и полноценный хобби-центр. Здесь можно арендовать столы для игр с друзьями, проходить обучение и мастер-классы по интересующим тебя играм, заводить новые знакомства и приобщаться к игровому комьюнити!</p>
+      </div>
+
+      <div class="shop__photo">
+        <img class="shop__img" src="@/assets/images/store-on-main.jpg" alt="">
+      </div>
     </div>
   </div>
 </template>
@@ -24,19 +27,55 @@
 <style lang="scss" scoped>
 
     .shop {
-      display: flex;
-      justify-content: space-between;
       max-width: 1110px;
       margin: 80px auto;
 
+      &__wrapp {
+        display: flex;
+        justify-content: space-between;
+        
+        max-width: 1110px;
+        margin: 0px auto;
+
+        @media (max-width: 1180px) {
+          margin: 0px 20px;
+          align-items: center;
+        }
+
+        @media (max-width: 900px) {
+          flex-direction: column-reverse;
+        }
+      }
+
       &__info {
-        width: 45%;
+        max-width: 45%;
+
+        @media (max-width: 900px) {
+          max-width: 93%;
+          margin-top: 20px;
+        }
       }
 
       &__title {
         @include title-h2 ();
         
         margin-bottom: 21px;
+
+        @media (max-width: 1180px) {
+          margin: 0px 20px 21px;
+        }
+        @media (max-width: 900px) {
+          margin: 0px 40px ;
+          font-size: 21px;
+          line-height: 24px;
+        }
+
+        span {
+          @media (max-width: 500px) {
+            display: none;
+          }
+        }
+
       }
 
       &__text {
@@ -50,6 +89,12 @@
 
       &__photo {
         max-width: 49%;
+
+        @media (max-width: 900px) {
+          max-width: 93%;
+          margin-top: 20px;
+        }
+
       }
 
       &__img {
