@@ -2,8 +2,8 @@
   <main class="greetings">
     <banner-on-main />
     <catalog-on-main />
-    <more-info-on-main />
     <event-on-main />
+    <more-info-on-main />
     <info-shop-on-main />
     <contacts-and-map />
   </main>
