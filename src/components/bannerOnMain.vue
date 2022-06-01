@@ -1,7 +1,7 @@
 <template>
   <div class="banner">
     <splide :options="options">
-    <splide-slide>
+    <splide-slide class="banner__slide">
       <img class="banner__img" src="@/assets/images/magic-cathering_banner.jpg">
       <div class="banner__wrap">
         <div class="banner__discription">
@@ -20,7 +20,8 @@
         </div>
       </div>
     </splide-slide>
-    <splide-slide>
+
+    <splide-slide class="banner__slide">
       <img class="banner__img" src="@/assets/images/magic-cathering_banner.jpg">
       <div class="banner__wrap">
         <div class="banner__discription">
@@ -34,7 +35,8 @@
         </div>
       </div>
     </splide-slide>
-    <splide-slide>
+
+    <splide-slide class="banner__slide">
       <img class="banner__img" src="@/assets/images/magic-cathering_banner.jpg">
       <div class="banner__wrap">
         <div class="banner__discription">
@@ -68,7 +70,7 @@ export default {
       options: {
         rewind : true,
         width  : '100%',
-        gap    : '1rem',
+        // gap    : '1rem',
         type   : 'loop',
         padding: '20%',
         pagination: false,
@@ -77,6 +79,10 @@ export default {
             padding: 0,
             perPage: 1,
           },
+          768: {
+            arrows: false,
+            pagination: true,
+          }
         },
       }
     }
@@ -113,6 +119,10 @@ export default {
       margin: auto;
       margin-bottom: 30px;
       align-items: center;
+
+      @media (max-width: 768px) {
+        display: block;
+      }
     }
 
     &__relation {
@@ -133,11 +143,21 @@ export default {
       color: $--color-white;
     }
 
-    &__link {
-      // @include basic-button-link ();
+    &__slide {
+      padding-right: 5px;
 
+      @media (max-width: 1300px) {
+        padding-right: 15px;
+      }
+    
     }
 
+    .splide__pagination__page {
+      width: 23px;
+      height: 3px;
+      border-radius: 9px;
+      margin: 0 9px;
+    }
 
   }
 
