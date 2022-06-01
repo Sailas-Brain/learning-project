@@ -2,9 +2,9 @@
   <header class="header">
     <div class="header__top-wrap">
       <div class="header__top">
-        <a class="header__logo" href="#">
+        <router-link class="header__logo" to="/">
           <img src="@/assets/pictures/Logo.svg">
-        </a>
+        </router-link>
 
         <div class="header__search">
           <input class="header__field" type="text" name="search" placeholder="Найти игру">
@@ -40,7 +40,7 @@
 
           <ul class="header__list">
             <li class="header__item">
-              <a class="header__item-link" href="#">Wharhammer</a>
+              <router-link class="header__item-link" to="/catalog">Wharhammer</router-link>
             </li>
             <li class="header__item">
               <a class="header__item-link" href="#">Magic:the Cathering</a>
