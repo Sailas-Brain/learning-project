@@ -47,11 +47,24 @@
   .events {
     width: 100%;
     margin-top: 85px;
+    box-sizing: border-box;
+
+    @media (max-width: 1180px) {
+      padding: 0 20px;
+    }
 
     &__title {
       @include title-h2 ();
 
       margin-bottom: 20px;
+
+      @media (max-width: 500px) {
+        font-size: 27px;
+      }
+
+      @media (max-width: 400px) {
+        font-size: 21px;
+      }
     }
 
     &__container {
@@ -63,17 +76,57 @@
       display: flex;
       justify-content: space-between;
       width: 100%;
-      max-height: 394px;
-      margin-bottom: 38px;
+      margin-bottom: 30px;
 
+      @media (max-width: 960px) {
+        display: block;
+      }
+
+      @media (max-width: 768px) {
+        display: flex;
+        flex-flow: nowrap;
+        overflow: auto;
+
+        ::-webkit-scrollbar {
+          width: 10px;
+        }
+
+
+        margin-bottom: 40px;
+
+        scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1);
+
+        scrollbar-width: auto;
+      }
+
+      @media (max-width: 500px) {
+        margin-bottom: 30px;
+      }
     }
 
     &__article {
       position: relative;
+      display: block;
       width: 48.5%;
       
       /* тень карточки */
       filter: drop-shadow(5px 6px 16px rgba(42, 42, 42, 0.16));
+
+      @media (max-width: 960px) {
+        width: 100%;
+
+        margin-bottom: 20px;
+      }
+
+      @media (max-width: 768px) {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: auto;
+
+        margin: 0 10px 15px;
+
+        filter: none;
+      }
     }
 
     &__halloween {
@@ -90,9 +143,10 @@
 
     &__description {
       position: absolute;
-      bottom: 0px;
+      bottom: 4px;
       left: 0;
       max-height: 119px;
+      width: 100%;
       background: $--color-main;
       opacity: 0.79;
       border-radius: 0px 0px 9px 9px;
@@ -103,6 +157,10 @@
       font-size: 16px;
       line-height: 21px;
 
+      @media (max-width: 500px) {
+        font-size: 14px;
+        line-height: 18px;
+      }
     }
 
     &__wrap-info {
@@ -118,6 +176,13 @@
       margin-top: 22px;
       margin-bottom: 11px;
       width: 100%;
+
+      @media (max-width: 500px) {
+        display: block;
+
+        margin-top: 15px;
+        margin-bottom: 5px;
+      }
     }
 
     &__title-description {
@@ -125,11 +190,20 @@
       font-size: 19px;
 
       color: $--color-activ;
+
+      @media (max-width: 500px) {
+        font-size: 16px;
+      }
     }
 
     &__text {
       margin-bottom: 22px;
+
+      @media (max-width: 500px) {
+        margin-bottom: 10px;
+      }
     }
+
 
     &__button {
 
@@ -143,6 +217,13 @@
       line-height: 27px;
 
       margin: 0 auto;
+
+      @media (max-width:500px) {
+        width: 170px;
+        height: 37px;
+
+        font-size: 16px;
+      }
     }
   }
 

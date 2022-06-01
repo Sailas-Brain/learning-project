@@ -10,15 +10,25 @@
     <label class="form__name-input" for="comments">Ваш комментарий</label>
     <textarea class="form__input-field form__input-field--comments" id="comments" type="text" placeholder="Комментарий"></textarea>
 
-    <button class="form__button" type="submit">Заказать звонок</button>
-    <p class="form__text">Нажимая на кнопку "Заказать звонок", я даю <a class="form__link" href="#">согласие на обработку персональных данных.</a></p>
+    <button :class="{'form__button': true, 'contacts__form-button': addStyleButton}" type="submit">Заказать звонок</button>
+    <p :class="{'form__text': true, 'contacts__form-text': addStyleText,}">Нажимая на кнопку "Заказать звонок", я даю <a class="form__link" href="#">согласие на обработку персональных данных.</a></p>
   </form>
 </template>
 
 
 <script>
 export default {
-  name: 'call-order-form'
+  name: 'call-order-form',
+  props: {
+    addStyleText: {
+      type: Boolean,
+      default: false
+    },
+    addStyleButton: {
+      type: Boolean,
+      default: false,
+    }
+  }
 }
 </script>
 
@@ -118,7 +128,26 @@ export default {
 
     }
 
-  }
 
+    @media (max-width: 500px) {
+      .contacts__form-button {
+        width: 170px;
+        margin: 0 auto;
+
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .contacts__form-text {
+        font-size: 14px;
+        line-height: 117.1%;
+      }
+    }
+
+
+
+  }
 
 </style>
