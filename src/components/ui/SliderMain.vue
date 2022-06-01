@@ -9,7 +9,7 @@
 <script>
 
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
-import LinkButton from './ui/LinkButton.vue';
+import LinkButton from './LinkButton.vue';
 
 export default {
 

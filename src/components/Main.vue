@@ -1,6 +1,6 @@
 <template>
   <main class="greetings">
-    <banner-on-main 
+    <slider-main 
       :options="options"
     >
       <template v-for="slide in slides" :key="slide.id">
@@ -13,7 +13,7 @@
           />
         </splide-slide>
       </template>
-    </banner-on-main>
+    </slider-main>
     <catalog-on-main />
     <event-on-main />
     <more-info-on-main />
@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import bannerOnMain from '@/components/bannerOnMain.vue'
+import SliderMain from '@/components/ui/SliderMain.vue'
 import CatalogOnMain from '@/components/CatalogOnMain.vue'
 import moreInfoOnMain from '@/components/moreInfoOnMain.vue'
 import EventOnMain from '@/components/EventOnMain.vue'
@@ -76,7 +76,7 @@ export default {
   },
 
   components: {
-    bannerOnMain,
+    SliderMain,
     CatalogOnMain,
     moreInfoOnMain,
     EventOnMain,
