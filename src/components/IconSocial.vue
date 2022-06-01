@@ -1,5 +1,5 @@
 <template>
-  <div class="social">
+  <div :class="{'social': true, 'header__icon-none': socialIconNone}">
     <a class="social-icon" href="#">
       <img class="instagram-icon" src="@/assets/pictures/instagram-icon.svg">
     </a>
@@ -18,41 +18,54 @@
 
 <script>
 export default {
-  name: 'icon-social'
+  name: 'icon-social',
+  props: {
+    socialIconNone: {
+      type: Boolean,
+      default: false,
+    }
+
+  }
 }
 </script>
 
 <style lang="scss" scoped>
 
-    .social {
-      display: flex;
-      align-items: center;
-      width: 83px;
-      margin-left: auto;
-      
-    }
+  .social {
+    display: flex;
+    align-items: center;
+    width: 83px;
+    margin-left: auto;
+    
+  }
 
-    .social-icon {
-      display: flex;
-      align-items: center;
-      text-align: center;
-      width: 30x;
-      height: 30px;
+  .social-icon {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 30x;
+    height: 30px;
 
-      &--position {
-        position: relative;
-      }
+    &--position {
+      position: relative;
     }
+  }
 
-    .vk-icon {
-      text-align: center;
-      margin: 0 6px;
-    }
+  .vk-icon {
+    text-align: center;
+    margin: 0 6px;
+  }
 
-    .vk {
-      position: absolute;
-      top:11px;
-      left: 11px;
+  .vk {
+    position: absolute;
+    top:11px;
+    left: 11px;
+  }
+
+  @media (max-width:940px) {
+    .header__icon-none {
+      display: none;
     }
+  }
 
 </style>

@@ -2,16 +2,22 @@
   <header class="header">
     <div class="header__top-wrap">
       <div class="header__top">
+        <button class="header__mobil-burger" type="button">
+            <span class="header__mobil-icon-burger"></span> 
+        </button>
+
         <a class="header__logo" href="#">
           <img src="@/assets/pictures/Logo.svg">
         </a>
 
-        <div class="header__search">
-          <input class="header__field" type="text" name="search" placeholder="Найти игру">
-          <button class="header__button" type="submit">
-            <img class="header__search-icon" src="@/assets/pictures/icons_search.svg">
-          </button>
-        </div>
+        <form class="header__search">
+          <div class="header__search-wrap">
+            <input class="header__field" type="text" name="search" placeholder="Найти игру">
+            <button class="header__button" type="submit">
+              <img class="header__search-icon" src="@/assets/pictures/icons_search.svg">
+            </button>
+          </div>
+        </form>
 
         <div class="header__phone">
           <p class="header__text">+7 (495) 911-10-11</p>
@@ -33,10 +39,10 @@
     <div class="header__bottom-wrap">
       <div class="header__bottom">
         <nav class="header__navigation">
-          <button class="header__burger">
-            <span class="header__icon-burger">
-              <img src="@/assets/pictures/burger.svg">
-            </span> Каталог</button>
+          <button class="header__burger" type="button">
+            <span class="header__icon-burger"></span> 
+            <span class="header__text-burger">Каталог</span>
+          </button>
 
           <ul class="header__list">
             <li class="header__item">
@@ -56,8 +62,8 @@
             </li>
           </ul>
 
-          <icon-social />
           
+          <icon-social :socialIconNone="true" />
 
           <div class="header__container-menu">
             <div class="header__menu">
@@ -186,6 +192,53 @@ export default {
       height: 100%;
     }
 
+    &__mobil-burger {
+      display: none;
+      position: relative;
+
+      background: $--color-main;
+      border: none;
+      outline: none;
+
+      width: 30px;
+      height: 30px;
+
+    }
+
+    &__mobil-icon-burger {
+      position: absolute;
+      top: 15px;
+      left: 7px;
+
+      width: 20px;
+      height: 2.25px;
+      background: #fff;
+
+      border-radius: 3px;
+      
+      &::after,
+      &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 20px;
+        background: #fff;
+        border-radius: 3px;
+
+      }
+
+      &::after {
+        top: -7px;
+        height: 2.5px;
+      }
+
+      &::before {
+        top: 7px;
+        height: 2.5px;
+      }
+    }
+
     &__logo {
       display: block;
       height: 37px;
@@ -193,8 +246,22 @@ export default {
     }
 
     &__search {
+      width: 35%; 
+      margin: 0 15px; 
+      box-sizing: border-box;
+
+      @media (max-width: 940px) {
+        position: absolute;
+        top: 89px;
+        left: 0;
+        width: 94%;
+        margin: 0 1%;
+        
+      }
+    }
+
+    &__search-wrap {
       position: relative;
-      width: 475px;  
     }
 
     &__field {
@@ -250,6 +317,10 @@ export default {
 
       background-image: url(@/assets/pictures/phone-icon.svg);
       background-repeat: no-repeat;
+
+      @media (max-width: 1100px) {
+        font-size: 17px;
+      }
     }
 
     &__text {
@@ -291,7 +362,7 @@ export default {
     &__bottom-wrap {
       width: 100%;
       height: 52px;
-      background: #F2F2F2;
+      background: $--color-background;
       padding: 0 25px;
       box-sizing: border-box;
     }
@@ -308,9 +379,13 @@ export default {
       width: 100%;
       height: 52px;
 
+      @media (max-width: 940px) {
+        position: relative;
+      }
     }
 
     &__burger {
+      position: relative;
       display: flex;
       align-items: center;
       padding: 0;
@@ -334,22 +409,61 @@ export default {
 
       cursor: pointer;
 
-      &:hover,
-      &:focus {
+      &:hover {
         color: $--color-activ;
-        transition: color 0.2s ease;
+        transition: all 0.2s ease;
+        .header__icon-burger {
+          background: $--color-activ;
+          transition: all 0.2s ease;
+          &::before,
+          &::after {
+            background: $--color-activ;
+            transition: all 0.2s ease;
+          }
+        }
+      }
+
+      @media (max-width:940px) {
+        display: none;
       }
     }
 
     &__icon-burger {
-      display: block;
-      margin-right: 15px;
-      height: 20px;
+      position: absolute;
+      top: 25px;
+      left: 7px;
+
       width: 20px;
-      padding-top: 4px;
+      height: 2.25px;
+      background: $--color-main;
+
+      border-radius: 3px;
+      
+      &::after,
+      &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 20px;
+        background: $--color-main;
+        border-radius: 3px;
+      }
+
+      &::after {
+        top: -6px;
+        height: 2.5px;
+      }
+      
+      &::before {
+        top: 6px;
+        height: 2.5px;
+      }
     }
 
-
+    &__text-burger {
+      margin-left: auto;
+    }
 
     &__list {
       display: flex;
@@ -359,6 +473,10 @@ export default {
       margin: auto;
       align-items: center;
       padding: 0;
+
+      @media (max-width: 940px) {
+        display: none;
+      }
     }
 
     &__item {
@@ -382,10 +500,6 @@ export default {
         transition: color 0.2s ease;
       }
     }
-
-
-
-
 
     &__container-menu {
       display: none;
@@ -497,8 +611,6 @@ export default {
         }
       }
     }
-
-
 
     &__catalog-product {
       width: 864px;
