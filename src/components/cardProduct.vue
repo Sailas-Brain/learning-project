@@ -1,20 +1,20 @@
 <template>
   <div class="card">
     <div class="card__wrapp">
-      <img class="card__img" src="@/assets/images/chaos_space_marines.jpg" alt="">
+      <img class="card__img" :src="src">
       <div class="card__params">
         <div class="card__audience">
           <img src="@/assets/images/audience_1.svg" alt="">
-          <p>2-4</p>
+          <p>{{ comunity }}</p>
         </div>
         <div class="card__time">
           <img src="@/assets/images/ic_sharp-timer.svg" alt="">
-          <p>30-60</p>
+          <p>{{ time }}</p>
         </div>
-        <p>18+</p>
+        <p>{{ age }}+</p>
       </div>
-      <h4 class="card__name">Warhammer 40,000: Chaos Space Marines</h4>
-      <p class="card__price">3657 ₽</p>
+      <h4 class="card__name">{{ name }}</h4>
+      <p class="card__price">{{ price }} ₽</p>
       <button class="card__basket">В корзину <img src="@/assets/images/shopping-cart.svg" alt=""></button>
       <a class="card__buy-now" href="">Купить в 1 клик</a>
     </div>
@@ -24,7 +24,34 @@
 <script>
 
   export default {
-    name: 'card-product'
+    
+    props: {
+ 
+    src: {
+      type: String,
+      default: ''
+    },
+    comunity: {
+      type: String,
+      default: ''
+    },
+    time: {
+      type: String,
+      default: ''
+    },
+    age: {
+      type: String,
+      default: ''
+    },
+    name: {
+      type: String,
+      default: ''
+    },
+    price: {
+      type: String,
+      default: ''
+    },
+  }
   }
 
 </script>
@@ -49,10 +76,10 @@
 
     &__img {
       display: block;
-      margin: auto;
-      margin-bottom: 5px;
-      width: 193px;
-      height: 168px;
+      margin: 11px auto;
+
+      
+      height: 150px;
     }
 
     &__params {
