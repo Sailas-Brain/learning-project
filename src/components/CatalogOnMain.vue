@@ -159,7 +159,7 @@
 
         &:hover,
         &:focus {
-          color: $--color-activ;
+          color: $--color-active;
           transition: color 0.2s ease;
         }
 

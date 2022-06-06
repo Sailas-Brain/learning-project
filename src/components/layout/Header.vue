@@ -1,18 +1,35 @@
 <template>
   <header class="header">
     <div class="header__top-wrap">
-      <div class="header__top">
-        <button class="header__mobil-burger" type="button">
-            <span class="header__mobil-icon-burger"></span> 
+      <div 
+        class="header__top" 
+        ref="top"
+      >
+        <button 
+          class="header__mobil-burger" 
+          type="button" 
+          ref="button"
+          @click="handlerClick"
+        >
+          <span class="header__mobil-icon-burger"></span>
+          <span class="header__mobil-icon-burger"></span>
+          <span class="header__mobil-icon-burger"></span>
         </button>
 
-        <a class="header__logo" href="#">
-          <img src="@/assets/pictures/Logo.svg">
+        <a 
+          class="header__logo" 
+          href="#"
+        >
+          <img class="header__logo-picture" src="@/assets/pictures/Logo.png">
         </a>
 
         <form class="header__search">
           <div class="header__search-wrap">
-            <input class="header__field" type="text" name="search" placeholder="Найти игру">
+            <input 
+              class="header__field-search" 
+              type="text" name="search" 
+              placeholder="Найти игру"
+            >
             <button class="header__button" type="submit">
               <img class="header__search-icon" src="@/assets/pictures/icons_search.svg">
             </button>
@@ -149,6 +166,56 @@
             </div>
           </div>
 
+          <div 
+            class="header__container-mobail"
+            ref="active"
+          >
+            <div 
+              class="header__wrap-mobail"
+
+            >
+              <ul class="header__top-list-mobail">
+                <li class="header__item-mobail">
+                  <a class="header__link-mobail" href="#">Настольные игры</a>
+                </li>
+                <li class="header__item-mobail">
+                  <a class="header__link-mobail" href="#">Warhammer 40000</a>
+                </li>
+                <li class="header__item-mobail">
+                  <a class="header__link-mobail" href="#">Magic:the Gathering</a>
+                </li>
+                <li class="header__item-mobail">
+                  <a class="header__link-mobail" href="#">Аксессуары для игр</a>
+                </li>
+                <li class="header__item-mobail">
+                  <a class="header__link-mobail" href="#">Краски</a>
+                </li>
+                <li class="header__item-mobail">
+                  <a class="header__link-mobail" href="#">Товары для детей</a>
+                </li>
+                <li class="header__item-mobail">
+                  <a class="header__link-mobail" href="#">Аксессуары для моделизма</a>
+                </li>
+              </ul>
+
+              <ul class="header__bottom-list-mobail">
+                <li class="header__item-mobail">
+                  <a class="header__link-mobail" href="#">Мероприятия</a>
+                </li>
+                <li class="header__item-mobail">
+                  <a class="header__link-mobail" href="#">Блог</a>
+                </li>
+                <li class="header__item-mobail">
+                  <a class="header__link-mobail" href="#">О центре</a>
+                </li>
+                <li class="header__item-mobail">
+                  <a class="header__link-mobail" href="#">Контакты</a>
+                </li>
+              </ul>
+            </div>
+            <div class="header__background-mobail"></div>
+          </div>
+
         </nav>
 
       </div>
@@ -163,8 +230,29 @@
 
 import IconSocial from '../IconSocial.vue'
 
+
 export default {
   components: { IconSocial },
+  data () {
+    return {
+
+    }
+  },
+
+  methods: {
+
+    handlerClick() {
+      
+      if(this.$refs.button.classList.contains("open")) {
+        this.$refs.button.classList.remove("open");
+        this.$refs.active.classList.remove("active");
+      } else {
+        this.$refs.button.classList.add("open");
+        this.$refs.active.classList.add("active");
+      }
+    }
+
+  },
 
 }
 </script>
@@ -180,7 +268,12 @@ export default {
       width: 100%;
       height: 82px;
       padding: 0 25px;
-      box-sizing: border-box
+      box-sizing: border-box;
+
+      @media (max-width: 940px) {
+        height: 72px;
+      }
+
     }
 
     &__top {
@@ -191,6 +284,8 @@ export default {
       max-width: 1110px;
       height: 100%;
     }
+
+    /*бургер на мобильном */
 
     &__mobil-burger {
       display: none;
@@ -203,46 +298,100 @@ export default {
       width: 30px;
       height: 30px;
 
+      cursor: pointer;
+
+      transform: rotate(0deg);
+      transition: .5s ease-in-out;
+
+      @media (max-width: 940px) {
+        display: block;
+      }
+
     }
 
     &__mobil-icon-burger {
       position: absolute;
-      top: 15px;
-      left: 7px;
+      left: 0;
 
-      width: 20px;
+      width: 100%;
       height: 2.25px;
       background: #fff;
 
       border-radius: 3px;
+
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+
+      @media (max-width: 940px) {
+        &:nth-child(1) {
+          top: 4px;
+        }
+
+        &:nth-child(2) {
+          top: 14px;
+        }
+
+        &:nth-child(3) {
+          top: 24px;
+        }
+      }
       
-      &::after,
-      &::before {
-        position: absolute;
-        content: "";
-        top: 0;
-        left: 0;
-        width: 20px;
-        background: #fff;
-        border-radius: 3px;
-
-      }
-
-      &::after {
-        top: -7px;
-        height: 2.5px;
-      }
-
-      &::before {
-        top: 7px;
-        height: 2.5px;
-      }
     }
+
+    .open {
+      & span:nth-child(1) {
+        top: 14px;
+        height: 3px;
+        transform: rotate(135deg);
+
+        @media (max-width: 768px) {
+          top: 14px;
+          height: 2px;
+        }
+      }
+
+      & span:nth-child(2) {
+        opacity: 0;
+        left: -60px;
+      }
+
+      & span:nth-child(3) {
+        top: 14px;
+        height: 3px;
+        transform: rotate(-135deg);
+
+        @media (max-width: 768px) {
+          top: 14px;
+          height: 2px;
+        }
+
+      }
+
+    }
+
+    /* desktop*/
 
     &__logo {
       display: block;
+      height: 40px;
+      width: 157px;
+      padding-top: 5px;
+      box-sizing: border-box;
+
+      @media (max-width: 768px) {
+        height: 30px;
+        width: 121px;
+      }
+    }
+
+    &__logo-picture {
       height: 37px;
       width: 157px;
+
+      @media (max-width: 768px) {
+        height: 28px;
+        width: 121px;
+      }
     }
 
     &__search {
@@ -252,11 +401,12 @@ export default {
 
       @media (max-width: 940px) {
         position: absolute;
-        top: 89px;
+        top: 79px;
         left: 0;
-        width: 94%;
-        margin: 0 1%;
-        
+        width: 100%;
+        margin: 0;
+        z-index: 1;
+        padding: 0px 20px;
       }
     }
 
@@ -264,7 +414,7 @@ export default {
       position: relative;
     }
 
-    &__field {
+    &__field-search {
       box-sizing: border-box;
       width: 100%;
       height: 38px;
@@ -321,6 +471,10 @@ export default {
       @media (max-width: 1100px) {
         font-size: 17px;
       }
+
+      @media (max-width: 940px) {
+        display: none;
+      }
     }
 
     &__text {
@@ -365,6 +519,11 @@ export default {
       background: $--color-background;
       padding: 0 25px;
       box-sizing: border-box;
+
+
+      @media (max-width: 940px) {
+        padding: 0px;
+      }
     }
 
     &__bottom {
@@ -410,14 +569,14 @@ export default {
       cursor: pointer;
 
       &:hover {
-        color: $--color-activ;
+        color: $--color-active;
         transition: all 0.2s ease;
         .header__icon-burger {
-          background: $--color-activ;
+          background: $--color-active;
           transition: all 0.2s ease;
           &::before,
           &::after {
-            background: $--color-activ;
+            background: $--color-active;
             transition: all 0.2s ease;
           }
         }
@@ -496,20 +655,24 @@ export default {
 
       &:hover,
       &:focus {
-        color: $--color-activ;
+        color: $--color-active;
         transition: color 0.2s ease;
       }
     }
 
     &__container-menu {
-      display: none;
+      // display: none;
       position: absolute;
       top: 0;
       left: 0px;
       width: 100%;
       height: 1800px;
       background: rgba(00, 00, 00, 0.65);
-      z-index: 1;
+      z-index: 2;
+
+      @media (max-width: 940px) {
+        display: none;
+      }
     }
 
     &__menu {
@@ -599,10 +762,9 @@ export default {
         transform: rotate(45deg);
       }
 
-
       &:focus,
       &:hover {
-        background: $--color-activ;
+        background: $--color-active;
         transition: background 0.3s ease;
 
         &::after {
@@ -651,10 +813,107 @@ export default {
 
       &:hover,
       &:focus {
-        color: $--color-activ;
+        color: $--color-active;
         transition: color 0.2s ease;
       }
     }
+
+    /*mobail menu */
+
+    &__container-mobail {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      z-index: 2;
+
+      @media (max-width: 940px) {
+        display: block;
+        left: -1000px;
+      }
+    }
+
+    &__background-mobail {
+      width: 100%;
+      height: 1000px;
+      background: rgba(42, 42, 42, 0.65);
+    }
+
+    &__wrap-mobail {
+      position: absolute;
+      top: 0;
+      left: -400px;
+      width: 400px;
+      background: $--color-white;
+
+      transition: left .5s cubic-bezier(0.68, 0.55, 0.27, 1.55);
+
+      @media (max-width: 450px) {
+        width: 85%;
+      }
+    }
+
+
+    .active {
+      left: 0;
+
+      .header__wrap-mobail {
+        left: 0;
+      }
+    }
+
+
+    &__top-list-mobail {
+      margin-bottom: 15px;
+    }
+
+    &__bottom-list-mobail {
+      padding-top: 10px;
+      border-top: 2px solid #C4C4C4;
+      margin-bottom: 26px;
+
+    }
+
+    &__item-mobail {
+      list-style: none;
+    }
+
+    &__link-mobail {
+      position: relative;
+      display: block;
+      font-family: 'trebuchetms';
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 252.7%;
+
+      padding-right: 30px;
+      padding-left: 30px;
+      color: $--color-main;
+
+      &:hover,
+      &:focus {
+        background: $--color-active;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 14px;
+          right: 16px;
+          height: 8px;
+          width: 8px;
+          border-top: 2px solid $--color-main;
+          border-right: 2px solid $--color-main;
+          transform: rotate(45deg);
+        }
+
+      }
+
+    }
+
+
+
+
 
   }
 
