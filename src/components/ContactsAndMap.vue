@@ -153,7 +153,7 @@ import CallOrderForm from './ui/CallOrderForm.vue'
 
       &:hover,
       &:focus {
-        color: $--color-activ;
+        color: $--color-active;
       }
 
       @media (max-width: 500px) {

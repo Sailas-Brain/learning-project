@@ -116,7 +116,7 @@
       filter: drop-shadow(5px 6px 16px rgba(42, 42, 42, 0.16));
 
       h4:hover {
-        color: $--color-activ;
+        color: $--color-active;
       }
 
       @media (max-width: 1130px) {
@@ -183,7 +183,7 @@
       margin: 8px auto;
       width: 311px;
       height: 71px;
-      border: 3px solid $--color-activ;
+      border: 3px solid $--color-active;
       border-radius: 9px;
       
       text-decoration: none;
@@ -192,7 +192,7 @@
       font-weight: 700;
       font-size: 23px;
       line-height: 68px;
-      color: $--color-activ;
+      color: $--color-active;
 
       transition: color .3s 
       ease-in-out, background-color .3s 

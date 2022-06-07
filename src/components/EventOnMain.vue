@@ -189,7 +189,7 @@
       font-weight: 700;
       font-size: 19px;
 
-      color: $--color-activ;
+      color: $--color-active;
 
       @media (max-width: 500px) {
         font-size: 16px;

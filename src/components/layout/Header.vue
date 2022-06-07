@@ -1,17 +1,39 @@
 <template>
   <header class="header">
     <div class="header__top-wrap">
-      <div class="header__top">
-        <router-link class="header__logo" to="/">
-          <img src="@/assets/pictures/Logo.svg">
-        </router-link>
+      <div 
+        class="header__top" 
+        ref="top"
+      >
+        <button 
+          class="header__mobil-burger" 
+          type="button" 
+          ref="button"
+          @click="handlerClick"
+        >
+          <span class="header__mobil-icon-burger"></span>
+          <span class="header__mobil-icon-burger"></span>
+          <span class="header__mobil-icon-burger"></span>
+        </button>
 
-        <div class="header__search">
-          <input class="header__field" type="text" name="search" placeholder="Найти игру">
-          <button class="header__button" type="submit">
-            <img class="header__search-icon" src="@/assets/pictures/icons_search.svg">
-          </button>
-        </div>
+        <a 
+          class="header__logo" 
+          href="#"
+        >
+          <img class="header__logo-picture" src="@/assets/pictures/Logo.png">
+        </a>
+        <form class="header__search">
+          <div class="header__search-wrap">
+            <input 
+              class="header__field-search" 
+              type="text" name="search" 
+              placeholder="Найти игру"
+            >
+            <button class="header__button" type="submit">
+              <img class="header__search-icon" src="@/assets/pictures/icons_search.svg">
+            </button>
+          </div>
+        </form>
 
         <div class="header__phone">
           <p class="header__text">+7 (495) 911-10-11</p>
@@ -33,10 +55,10 @@
     <div class="header__bottom-wrap">
       <div class="header__bottom">
         <nav class="header__navigation">
-          <button class="header__burger">
-            <span class="header__icon-burger">
-              <img src="@/assets/pictures/burger.svg">
-            </span> Каталог</button>
+          <button class="header__burger" type="button">
+            <span class="header__icon-burger"></span> 
+            <span class="header__text-burger">Каталог</span>
+          </button>
 
           <ul class="header__list">
             <li class="header__item">
@@ -56,91 +78,130 @@
             </li>
           </ul>
 
-          <icon-social />
           
+          <icon-social :socialIconNone="true" />
 
           <div class="header__container-menu">
             <div class="header__menu">
               <div class="header__category">                
-                <button class="header__button-close">Закрыть</button>
+                <button class="header__button-close" type="button">Закрыть</button>
                 <ul class="header__list-category">
                   <li class="header__item">
-                    <a class="header__catalog-link">Все категории</a>
+                    <a class="header__catalog-link" href="#">Все категории</a>
                   </li>
                   <li class="header__item">
-                    <a class="header__catalog-link">Настольные игры</a>
+                    <a class="header__catalog-link" href="#">Настольные игры</a>
                   </li>
                   <li class="header__item">
-                    <a class="header__catalog-link">Warhammer 40000</a>
+                    <a class="header__catalog-link" href="#">Warhammer 40000</a>
                   </li>
                   <li class="header__item">
-                    <a class="header__catalog-link">Magic: the Gathering</a>
+                    <a class="header__catalog-link" href="#">Magic: the Gathering</a>
                   </li>
                   <li class="header__item">
-                    <a class="header__catalog-link">Аксессуары для игр</a>
+                    <a class="header__catalog-link" href="#">Аксессуары для игр</a>
                   </li>
                   <li class="header__item">
-                    <a class="header__catalog-link">Краски</a>
+                    <a class="header__catalog-link" href="#">Краски</a>
                   </li>
                   <li class="header__item">
-                    <a class="header__catalog-link">Товары для детей</a>
+                    <a class="header__catalog-link" href="#">Товары для детей</a>
                   </li>
                   <li class="header__item">
-                    <a class="header__catalog-link">Аксессуары для моделизма</a>
+                    <a class="header__catalog-link" href="#">Аксессуары для моделизма</a>
                   </li>
                 </ul>
               </div>
 
               <div class="header__catalog-product">
                 <p class="header__catalog-title">Warhammer 40000</p>
-
-                <div class="header__list-wrapper">
-
-                  <ul class="header__list-product">
+                <ul class="header__list-product">
                     <li class="header__product-item">
-                      <a class="header__link-product">Альтернативные миниатюры (69)</a>
+                      <a class="header__link-product" href="#">Альтернативные миниатюры</a>
                     </li>
                     <li class="header__product-item">
-                      <a class="header__link-product">Warhammer 40k (400)</a>
+                      <a class="header__link-product" href="#">Warhammer 40k</a>
                     </li>
                     <li class="header__product-item">
-                      <a class="header__link-product">Age of Sigmar (263)</a>
+                      <a class="header__link-product" href="#">Warcry</a>
                     </li>
                     <li class="header__product-item">
-                      <a class="header__link-product">Warcry (49)</a>
-                    </li>
-                  </ul>
-
-                  <ul class="header__list-product">
+                      <a class="header__link-product" href="#">Warhammer: Underworlds</a>
+                    </li>                   
                     <li class="header__product-item">
-                      <a class="header__link-product">Nercomunda (21)</a>
+                      <a class="header__link-product" href="#">Warcry</a>
                     </li>
                     <li class="header__product-item">
-                      <a class="header__link-product">Lord of the Rings(16)</a>
+                      <a class="header__link-product" href="#">Lord of the Rings</a>
                     </li>
                     <li class="header__product-item">
-                      <a class="header__link-product">Blood Bowl (28)</a>
+                      <a class="header__link-product" href="#">Blood Bowl</a>
                     </li>
                     <li class="header__product-item">
-                      <a class="header__link-product">Titanicus (4)</a>
-                    </li>
-                  </ul>
-
-                  <ul class="header__list-product">
-                    <li class="header__product-item">
-                      <a class="header__link-product">Warcry (49)</a>
+                      <a class="header__link-product" href="#">Titanicus</a>
                     </li>
                     <li class="header__product-item">
-                      <a class="header__link-product">Warhammer: Underworlds (22)</a>
+                      <a class="header__link-product" href="#">Nercomunda</a>
                     </li>
                     <li class="header__product-item">
-                      <a class="header__link-product">Killtem (4)</a>
+                      <a class="header__link-product" href="#">Age of Sigmar</a>
                     </li>
-                  </ul>
-                </div>
-                
+                    <li class="header__product-item">
+                      <a class="header__link-product" href="#">Killtem</a>
+                    </li>
+                </ul>
               </div>
             </div>
+          </div>
+
+          <div 
+            class="header__container-mobail"
+            ref="active"
+          >
+            <div 
+              class="header__wrap-mobail"
+
+            >
+              <ul class="header__top-list-mobail">
+                <li class="header__item-mobail">
+                  <a class="header__link-mobail" href="#">Настольные игры</a>
+                </li>
+                <li class="header__item-mobail">
+                  <a class="header__link-mobail" href="#">Warhammer 40000</a>
+                </li>
+                <li class="header__item-mobail">
+                  <a class="header__link-mobail" href="#">Magic:the Gathering</a>
+                </li>
+                <li class="header__item-mobail">
+                  <a class="header__link-mobail" href="#">Аксессуары для игр</a>
+                </li>
+                <li class="header__item-mobail">
+                  <a class="header__link-mobail" href="#">Краски</a>
+                </li>
+                <li class="header__item-mobail">
+                  <a class="header__link-mobail" href="#">Товары для детей</a>
+                </li>
+                <li class="header__item-mobail">
+                  <a class="header__link-mobail" href="#">Аксессуары для моделизма</a>
+                </li>
+              </ul>
+
+              <ul class="header__bottom-list-mobail">
+                <li class="header__item-mobail">
+                  <a class="header__link-mobail" href="#">Мероприятия</a>
+                </li>
+                <li class="header__item-mobail">
+                  <a class="header__link-mobail" href="#">Блог</a>
+                </li>
+                <li class="header__item-mobail">
+                  <a class="header__link-mobail" href="#">О центре</a>
+                </li>
+                <li class="header__item-mobail">
+                  <a class="header__link-mobail" href="#">Контакты</a>
+                </li>
+              </ul>
+            </div>
+            <div class="header__background-mobail"></div>
           </div>
 
         </nav>
@@ -157,8 +218,29 @@
 
 import IconSocial from '../IconSocial.vue'
 
+
 export default {
   components: { IconSocial },
+  data () {
+    return {
+
+    }
+  },
+
+  methods: {
+
+    handlerClick() {
+      
+      if(this.$refs.button.classList.contains("open")) {
+        this.$refs.button.classList.remove("open");
+        this.$refs.active.classList.remove("active");
+      } else {
+        this.$refs.button.classList.add("open");
+        this.$refs.active.classList.add("active");
+      }
+    }
+
+  },
 
 }
 </script>
@@ -174,7 +256,13 @@ export default {
       width: 100%;
       height: 82px;
       padding: 0 25px;
-      box-sizing: border-box
+      box-sizing: border-box;
+
+      @media (max-width: 940px) {
+        height: 72px;
+        padding: 0 20px;
+      }
+
     }
 
     &__top {
@@ -186,18 +274,155 @@ export default {
       height: 100%;
     }
 
+    /*бургер на мобильном */
+
+    &__mobil-burger {
+      display: none;
+      position: relative;
+
+      background: $--color-main;
+      border: none;
+      outline: none;
+
+      width: 30px;
+      height: 30px;
+
+      cursor: pointer;
+
+      transform: rotate(0deg);
+      transition: .5s ease-in-out;
+
+      @media (max-width: 940px) {
+        display: block;
+      }
+
+      @media (max-width: 768px) {
+        width: 25px;
+        height: 20px;
+      }
+
+    }
+
+    &__mobil-icon-burger {
+      position: absolute;
+      left: 0;
+
+      width: 100%;
+      height: 2.25px;
+      background: $--color-white;
+
+      border-radius: 3px;
+
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+
+      @media (max-width: 940px) {
+        &:nth-child(1) {
+          top: 4px;
+        }
+
+        &:nth-child(2) {
+          top: 14px;
+        }
+
+        &:nth-child(3) {
+          top: 24px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        &:nth-child(1) {
+          top: 0px;
+        }
+
+        &:nth-child(2) {
+          top: 8px;
+        }
+
+        &:nth-child(3) {
+          top: 16px;
+        }
+      }
+      
+    }
+
+    .open {
+      & span:nth-child(1) {
+        top: 14px;
+        height: 3px;
+        transform: rotate(135deg);
+
+        @media (max-width: 768px) {
+          top: 8px;
+          height: 2px;
+        }
+      }
+
+      & span:nth-child(2) {
+        opacity: 0;
+        left: -60px;
+      }
+
+      & span:nth-child(3) {
+        top: 14px;
+        height: 3px;
+        transform: rotate(-135deg);
+
+        @media (max-width: 768px) {
+          top: 8px;
+          height: 2px;
+        }
+
+      }
+
+    }
+
+    /* desktop*/
+
     &__logo {
-      display: block;
-      height: 37px;
+      display: flex;
+      align-items: center;
+      height: 100%;
       width: 157px;
+      box-sizing: border-box;
+
+      @media (max-width: 768px) {
+        width: 121px;
+      }
+    }
+
+    &__logo-picture {
+      height: 40px;
+      width: 157px;
+      padding-top: 3px;
+
+      @media (max-width: 768px) {
+        height: 33px;
+        width: 121px;
+      }
     }
 
     &__search {
-      position: relative;
-      width: 475px;  
+      width: 35%; 
+      margin: 0 15px; 
+      box-sizing: border-box;
+
+      @media (max-width: 940px) {
+        position: absolute;
+        top: 79px;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        z-index: 1;
+        padding: 0px 20px;
+      }
     }
 
-    &__field {
+    &__search-wrap {
+      position: relative;
+    }
+
+    &__field-search {
       box-sizing: border-box;
       width: 100%;
       height: 38px;
@@ -250,6 +475,14 @@ export default {
 
       background-image: url(@/assets/pictures/phone-icon.svg);
       background-repeat: no-repeat;
+
+      @media (max-width: 1100px) {
+        font-size: 17px;
+      }
+
+      @media (max-width: 940px) {
+        display: none;
+      }
     }
 
     &__text {
@@ -261,39 +494,56 @@ export default {
       justify-content: space-between;
       align-items: center;
       width: 80px;
-      height: 35px;
+      height: 100%;
+
+      @media (max-width: 768px) {
+        width: 60px;
+      }
     }
 
     &__link-registration {
-      width: 31px;
-      height: 31px;
+
       background-color: $--color-main;
       border: none;
       outline: none;
       cursor: pointer;
+
     }
 
     &__profile-icon {
       width: 30px;
       height: 30px;
-    }
 
-    &__link-cart {
-      width: 30px;
-      height: 27px;
+      @media (max-width: 768px) {
+        width: 23px;
+        height: 23px;
+      }
+
     }
 
     &__group-icon {
+      padding-top: 5px;
       width: 28px;
-      height: 31px;
+      height: 28px;
+
+      @media (max-width: 768px) {
+        width: 23px;
+        height: 25px;
+      }
+
     }
 
     &__bottom-wrap {
       width: 100%;
       height: 52px;
-      background: #F2F2F2;
+      background: $--color-background;
       padding: 0 25px;
       box-sizing: border-box;
+
+
+      @media (max-width: 940px) {
+        padding: 0px;
+      }
     }
 
     &__bottom {
@@ -308,9 +558,13 @@ export default {
       width: 100%;
       height: 52px;
 
+      @media (max-width: 940px) {
+        position: relative;
+      }
     }
 
     &__burger {
+      position: relative;
       display: flex;
       align-items: center;
       padding: 0;
@@ -334,22 +588,59 @@ export default {
 
       cursor: pointer;
 
-      &:hover,
-      &:focus {
-        color: $--color-activ;
-        transition: color 0.2s ease;
+      &:hover {
+        color: $--color-active;
+        transition: all 0.2s ease;
+        .header__icon-burger {
+          background: $--color-active;
+          transition: all 0.2s ease;
+          &::before,
+          &::after {
+            background: $--color-active;
+            transition: all 0.2s ease;
+          }
+        }
+      }
+
+      @media (max-width:940px) {
+        display: none;
       }
     }
 
     &__icon-burger {
-      display: block;
-      margin-right: 15px;
-      height: 20px;
+      position: absolute;
+      top: 25px;
+      left: 7px;
+
       width: 20px;
-      padding-top: 4px;
+      height: 2px;
+      background: $--color-main;
+
+      
+      &::after,
+      &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 20px;
+        background: $--color-main;
+      }
+
+      &::after {
+        top: -6px;
+        height: 2px;
+      }
+      
+      &::before {
+        top: 6px;
+        height: 2px;
+      }
     }
 
-
+    &__text-burger {
+      margin-left: auto;
+    }
 
     &__list {
       display: flex;
@@ -359,6 +650,10 @@ export default {
       margin: auto;
       align-items: center;
       padding: 0;
+
+      @media (max-width: 940px) {
+        display: none;
+      }
     }
 
     &__item {
@@ -378,14 +673,10 @@ export default {
 
       &:hover,
       &:focus {
-        color: $--color-activ;
+        color: $--color-active;
         transition: color 0.2s ease;
       }
     }
-
-
-
-
 
     &__container-menu {
       display: none;
@@ -395,7 +686,11 @@ export default {
       width: 100%;
       height: 1800px;
       background: rgba(00, 00, 00, 0.65);
-      z-index: 1;
+      z-index: 2;
+
+      @media (max-width: 940px) {
+        display: none;
+      }
     }
 
     &__menu {
@@ -405,14 +700,20 @@ export default {
       min-height: 435px;
       background: #FFFBF8;
       margin-top: 82px;
+
+      color: $--color-main;
       
       /* тень активная */
       box-shadow: 5px 6px 15px rgba(251, 121, 27, 0.63);
     }
 
     &__category {
-      width: 255px;
+      width: 245px;
       border-right: 2px solid rgba(42, 42, 42, 0.26);
+    }
+
+    &__list-category {
+      width: 245px;
     }
 
     &__button-close {
@@ -452,6 +753,18 @@ export default {
         transform: rotate(-45deg);
       }
 
+      &:hover,
+      &:focus {
+        color: $--color-active;
+        transition: color 0.2s ease;
+
+        &::before,
+        &::after {
+          background: $--color-active;
+          transition: all 0.2s ease;
+        }
+      }
+
     }
 
     &__catalog-link {
@@ -462,6 +775,7 @@ export default {
       font-family: "trebuchetms";
       font-weight: 700;
       font-size: 16px;
+      color: inherit;
 
       background: #FFFBF8;
       border: 0;
@@ -485,10 +799,9 @@ export default {
         transform: rotate(45deg);
       }
 
-
       &:focus,
       &:hover {
-        background: $--color-activ;
+        background: $--color-active;
         transition: background 0.3s ease;
 
         &::after {
@@ -498,13 +811,12 @@ export default {
       }
     }
 
-
-
     &__catalog-product {
       width: 864px;
       padding-left: 30px;
       padding-top: 17px;
-      padding-right: 50px;
+
+      box-sizing: border-box;
     }
 
     &__catalog-title {
@@ -513,16 +825,22 @@ export default {
       font-size: 20px;
     }
 
-    &__list-wrapper {
+
+    &__list-product {
       display: flex;
-      margin-top: 25px;
-      width: 100%;
-      box-sizing: border-box;
+      flex-flow: wrap;
+      justify-content: space-between;
+      align-content: flex-start;
+      padding-right: 10px;
+      margin-top: 20px;
     }
 
     &__product-item {
       list-style: none;
-      display: inline;
+      display: block;
+      min-width: 158px;
+      width: 30%;
+      padding: 10px 0;
     }
 
     &__link-product {
@@ -531,18 +849,112 @@ export default {
       font-family: "trebuchetms";
       font-weight: 700;
       font-size: 16px;
-      width: 100%;
-      height: 40px;
-      line-height: 249.6%;
-      white-space: nowrap;
+      color: inherit;
       cursor: pointer;
 
       &:hover,
       &:focus {
-        color: $--color-activ;
+        color: $--color-active;
         transition: color 0.2s ease;
       }
     }
+
+    /*mobail menu */
+
+    &__container-mobail {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      z-index: 2;
+
+      @media (max-width: 940px) {
+        display: block;
+        left: -1000px;
+      }
+    }
+
+    &__background-mobail {
+      width: 100%;
+      height: 1000px;
+      background: rgba(42, 42, 42, 0.65);
+    }
+
+    &__wrap-mobail {
+      position: absolute;
+      top: 0;
+      left: -400px;
+      width: 400px;
+      background: $--color-white;
+
+      transition: left .5s cubic-bezier(0.68, 0.55, 0.27, 1.55);
+
+      @media (max-width: 450px) {
+        width: 85%;
+      }
+    }
+
+
+    .active {
+      left: 0;
+
+      .header__wrap-mobail {
+        left: 0;
+      }
+    }
+
+
+    &__top-list-mobail {
+      margin-bottom: 15px;
+    }
+
+    &__bottom-list-mobail {
+      padding-top: 10px;
+      border-top: 2px solid #C4C4C4;
+      margin-bottom: 26px;
+
+    }
+
+    &__item-mobail {
+      list-style: none;
+    }
+
+    &__link-mobail {
+      position: relative;
+      display: block;
+      font-family: 'trebuchetms';
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 252.7%;
+
+      padding-right: 30px;
+      padding-left: 30px;
+      color: $--color-main;
+
+      &:hover,
+      &:focus {
+        background: $--color-active;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 14px;
+          right: 16px;
+          height: 8px;
+          width: 8px;
+          border-top: 2px solid $--color-main;
+          border-right: 2px solid $--color-main;
+          transform: rotate(45deg);
+        }
+
+      }
+
+    }
+
+
+
+
 
   }
 
