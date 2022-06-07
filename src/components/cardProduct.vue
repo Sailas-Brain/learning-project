@@ -2,6 +2,7 @@
   <div class="card">
     <div class="card__wrapp">
       <img class="card__img" :src="src">
+      <div class="card__sale">-15%</div>
       <div class="card__params">
         <div class="card__audience">
           <img src="@/assets/images/audience_1.svg" alt="">
@@ -14,7 +15,10 @@
         <p>{{ age }}+</p>
       </div>
       <h4 class="card__name">{{ name }}</h4>
-      <p class="card__price">{{ price }} ₽</p>
+      <div class="card__price-wrap">
+        <del class="card__discount">4350 ₽</del>
+        <p class="card__price">{{ price }} ₽</p>
+      </div>  
       <button class="card__basket">В корзину <img src="@/assets/images/shopping-cart.svg" alt=""></button>
       <a class="card__buy-now" href="">Купить в 1 клик</a>
     </div>
@@ -68,6 +72,7 @@
     box-sizing: border-box;
 
     &__wrapp {
+      position: relative;
       margin: 15px auto;
       box-sizing: border-box;
       width: 80%;
@@ -110,6 +115,27 @@
       }
     }
 
+    &__sale {
+      position: absolute;
+
+      width: 60px;
+      height: 29px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-family: 'trebuchetms';
+      font-size: 16px;
+      line-height: 22px;
+
+      background: #F9A43F;
+      border-radius: 14px;
+      color: #FFFFFF;
+
+      top: 20px;
+      right: -20px;
+    }
+
     &__time {
       display: flex;
       align-items: center;
@@ -125,18 +151,24 @@
       font-size: 16px;
       line-height: 128.68%;
       text-align: center;
-      color: #2A2A2A;
+      color: $--color-main;
       margin: 11px auto;
     }
 
-    &__price {
+    &__price,
+    &__discount {
       width: 69px;
       font-family: "trebuchetms";
       font-weight: 700;
-      font-size: 21px;
+      font-size: 20px;
       line-height: 24px;
-      color: #2A2A2A;
-      margin: 11px auto;
+      color: $--color-main;
+      margin: 8px 10px;
+    }
+
+    &__price-wrap {
+      display: flex;
+      justify-content: space-between;
     }
 
     &__basket {

@@ -46,6 +46,27 @@
     <div class="title">
       <h2>Специальные предложения</h2>
     </div>
+    <slider-main
+      :options="optionsCard"
+      newClass="card"
+    >
+      <template 
+        v-for="card in cards"
+        :key="card.id"
+      >
+        <splide-slide class="banner__slide" >
+          <card-product
+            :src="card.src"
+            :comunity="card.comunity"
+            :time="card.time"
+            :age="card.age"
+            :name="card.name"
+            :price="card.price"
+          />
+          </splide-slide>
+      </template>
+    </slider-main>
+
 
     <event-on-main />
     <more-info-on-main />
