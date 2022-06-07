@@ -1,13 +1,13 @@
 <template>
-  <div class="banner__slide">
-    <img class="banner__img" :src="src">
-    <div class="banner__wrap">
-      <div class="banner__discription">
-        <div class="banner__text">
-          <p class="banner__relation"> {{ relation }} </p>
-          <p class="banner__game">  {{ game }} </p>
+  <div class="item-banner__slide">
+    <img class="item-banner__img" :src="src">
+    <div class="item-banner__wrap">
+      <div class="item-banner__discription">
+        <div class="item-banner__text">
+          <p class="item-banner__relation"> {{ relation }} </p>
+          <p class="item-banner__game">  {{ game }} </p>
         </div>
-        <div class="banner__link">
+        <div class="item-banner__link">
           <link-button
             :addClass="true"
             :link="true"
@@ -46,7 +46,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .banner {
+  .item-banner {
     width: 100%;
     margin: 0 auto;
 
@@ -101,14 +101,6 @@ export default {
       }
     
     }
-
-    .splide__pagination__page {
-      width: 23px;
-      height: 3px;
-      border-radius: 9px;
-      margin: 0 9px;
-    }
-
   }
 
 </style>
