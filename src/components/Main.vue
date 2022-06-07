@@ -20,7 +20,7 @@
     </slider-main>
     <catalog-on-main />
     <div class="title">
-      <h2>Ближайшие мероприятия</h2>
+      <h2>Успей купить</h2>
     </div>
     <slider-main
       :options="optionsCard"
@@ -42,9 +42,11 @@
           </splide-slide>
       </template>
     </slider-main>
+
     <div class="title">
-      <h2>Ближайшие мероприятия 85456</h2>
+      <h2>Специальные предложения</h2>
     </div>
+
     <event-on-main />
     <more-info-on-main />
     <info-shop-on-main />
@@ -111,15 +113,17 @@ export default {
         type   : 'loop',
         pagination: false,
         breakpoints: {
+          1200: {
+            pagination: true,
+            arrows: false,
+          },
           1100: {
             perPage: 3,
           },
-          768: {
+          830: {
             perPage: 2,
-            arrows: false,
-            pagination: true,
           },
-          530: {
+          560: {
             perPage: 1,
           }
         },
@@ -131,7 +135,7 @@ export default {
           comunity: '2-4',
           time: '30-60',
           age: '18',
-          name: 'Magic: the Gathering1',
+          name: 'Magic: the Gathering',
           price: '3657'
         },
         {

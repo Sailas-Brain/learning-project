@@ -58,6 +58,7 @@ export default {
   .card {
     max-width: 1100px;
     margin: 0 auto !important;
+    padding: 0 20px !important;
 
     .splide__pagination__page {
       width: 23px;
@@ -67,11 +68,17 @@ export default {
     }
 
     .splide__arrow--prev {
-      left: -4em;
+      left: -3em;
+      background: none;
     }
 
     .splide__arrow--next {
-      right: -4em;
+      right: -3em;
+      background: none;
+    }
+
+    .splide__pagination {
+      bottom: -25px;
     }
   }
 
