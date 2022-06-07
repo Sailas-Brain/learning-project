@@ -22,7 +22,6 @@
         >
           <img class="header__logo-picture" src="@/assets/pictures/Logo.png">
         </a>
-
         <form class="header__search">
           <div class="header__search-wrap">
             <input 
@@ -63,7 +62,7 @@
 
           <ul class="header__list">
             <li class="header__item">
-              <a class="header__item-link" href="#">Wharhammer</a>
+              <router-link class="header__item-link" to="/catalog">Wharhammer</router-link>
             </li>
             <li class="header__item">
               <a class="header__item-link" href="#">Magic:the Cathering</a>

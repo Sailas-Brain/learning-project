@@ -81,13 +81,11 @@
 
       @media (max-width: 1120px) {
         grid-template-areas: "a a" "b c" "d e";
-        margin: 0 60px;
+        margin: 0 20px;
         
       }
       @media (max-width: 600px) {
         display: block;
-        margin: 0 20px;
-        
       }
     }
 

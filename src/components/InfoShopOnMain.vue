@@ -30,6 +30,10 @@
       max-width: 1110px;
       margin: 80px auto;
 
+      @media (max-width: 1110px) {
+          margin: 30px auto;
+        }
+
       &__wrapp {
         display: flex;
         justify-content: space-between;
