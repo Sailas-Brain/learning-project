@@ -85,83 +85,72 @@
           <div class="header__container-menu">
             <div class="header__menu">
               <div class="header__category">                
-                <button class="header__button-close">Закрыть</button>
+                <button class="header__button-close" type="button">Закрыть</button>
                 <ul class="header__list-category">
                   <li class="header__item">
-                    <a class="header__catalog-link">Все категории</a>
+                    <a class="header__catalog-link" href="#">Все категории</a>
                   </li>
                   <li class="header__item">
-                    <a class="header__catalog-link">Настольные игры</a>
+                    <a class="header__catalog-link" href="#">Настольные игры</a>
                   </li>
                   <li class="header__item">
-                    <a class="header__catalog-link">Warhammer 40000</a>
+                    <a class="header__catalog-link" href="#">Warhammer 40000</a>
                   </li>
                   <li class="header__item">
-                    <a class="header__catalog-link">Magic: the Gathering</a>
+                    <a class="header__catalog-link" href="#">Magic: the Gathering</a>
                   </li>
                   <li class="header__item">
-                    <a class="header__catalog-link">Аксессуары для игр</a>
+                    <a class="header__catalog-link" href="#">Аксессуары для игр</a>
                   </li>
                   <li class="header__item">
-                    <a class="header__catalog-link">Краски</a>
+                    <a class="header__catalog-link" href="#">Краски</a>
                   </li>
                   <li class="header__item">
-                    <a class="header__catalog-link">Товары для детей</a>
+                    <a class="header__catalog-link" href="#">Товары для детей</a>
                   </li>
                   <li class="header__item">
-                    <a class="header__catalog-link">Аксессуары для моделизма</a>
+                    <a class="header__catalog-link" href="#">Аксессуары для моделизма</a>
                   </li>
                 </ul>
               </div>
 
               <div class="header__catalog-product">
                 <p class="header__catalog-title">Warhammer 40000</p>
-
-                <div class="header__list-wrapper">
-
-                  <ul class="header__list-product">
+                <ul class="header__list-product">
                     <li class="header__product-item">
-                      <a class="header__link-product">Альтернативные миниатюры (69)</a>
+                      <a class="header__link-product" href="#">Альтернативные миниатюры</a>
                     </li>
                     <li class="header__product-item">
-                      <a class="header__link-product">Warhammer 40k (400)</a>
+                      <a class="header__link-product" href="#">Warhammer 40k</a>
                     </li>
                     <li class="header__product-item">
-                      <a class="header__link-product">Age of Sigmar (263)</a>
+                      <a class="header__link-product" href="#">Warcry</a>
                     </li>
                     <li class="header__product-item">
-                      <a class="header__link-product">Warcry (49)</a>
-                    </li>
-                  </ul>
-
-                  <ul class="header__list-product">
+                      <a class="header__link-product" href="#">Warhammer: Underworlds</a>
+                    </li>                   
                     <li class="header__product-item">
-                      <a class="header__link-product">Nercomunda (21)</a>
+                      <a class="header__link-product" href="#">Warcry</a>
                     </li>
                     <li class="header__product-item">
-                      <a class="header__link-product">Lord of the Rings(16)</a>
+                      <a class="header__link-product" href="#">Lord of the Rings</a>
                     </li>
                     <li class="header__product-item">
-                      <a class="header__link-product">Blood Bowl (28)</a>
+                      <a class="header__link-product" href="#">Blood Bowl</a>
                     </li>
                     <li class="header__product-item">
-                      <a class="header__link-product">Titanicus (4)</a>
-                    </li>
-                  </ul>
-
-                  <ul class="header__list-product">
-                    <li class="header__product-item">
-                      <a class="header__link-product">Warcry (49)</a>
+                      <a class="header__link-product" href="#">Titanicus</a>
                     </li>
                     <li class="header__product-item">
-                      <a class="header__link-product">Warhammer: Underworlds (22)</a>
+                      <a class="header__link-product" href="#">Nercomunda</a>
                     </li>
                     <li class="header__product-item">
-                      <a class="header__link-product">Killtem (4)</a>
+                      <a class="header__link-product" href="#">Age of Sigmar</a>
                     </li>
-                  </ul>
-                </div>
-                
+                    <li class="header__product-item">
+                      <a class="header__link-product" href="#">Killtem</a>
+                    </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -272,6 +261,7 @@ export default {
 
       @media (max-width: 940px) {
         height: 72px;
+        padding: 0 20px;
       }
 
     }
@@ -307,6 +297,11 @@ export default {
         display: block;
       }
 
+      @media (max-width: 768px) {
+        width: 25px;
+        height: 20px;
+      }
+
     }
 
     &__mobil-icon-burger {
@@ -315,7 +310,7 @@ export default {
 
       width: 100%;
       height: 2.25px;
-      background: #fff;
+      background: $--color-white;
 
       border-radius: 3px;
 
@@ -335,6 +330,20 @@ export default {
           top: 24px;
         }
       }
+
+      @media (max-width: 768px) {
+        &:nth-child(1) {
+          top: 0px;
+        }
+
+        &:nth-child(2) {
+          top: 8px;
+        }
+
+        &:nth-child(3) {
+          top: 16px;
+        }
+      }
       
     }
 
@@ -345,7 +354,7 @@ export default {
         transform: rotate(135deg);
 
         @media (max-width: 768px) {
-          top: 14px;
+          top: 8px;
           height: 2px;
         }
       }
@@ -361,7 +370,7 @@ export default {
         transform: rotate(-135deg);
 
         @media (max-width: 768px) {
-          top: 14px;
+          top: 8px;
           height: 2px;
         }
 
@@ -372,24 +381,24 @@ export default {
     /* desktop*/
 
     &__logo {
-      display: block;
-      height: 40px;
+      display: flex;
+      align-items: center;
+      height: 100%;
       width: 157px;
-      padding-top: 5px;
       box-sizing: border-box;
 
       @media (max-width: 768px) {
-        height: 30px;
         width: 121px;
       }
     }
 
     &__logo-picture {
-      height: 37px;
+      height: 40px;
       width: 157px;
+      padding-top: 3px;
 
       @media (max-width: 768px) {
-        height: 28px;
+        height: 33px;
         width: 121px;
       }
     }
@@ -486,31 +495,43 @@ export default {
       justify-content: space-between;
       align-items: center;
       width: 80px;
-      height: 35px;
+      height: 100%;
+
+      @media (max-width: 768px) {
+        width: 60px;
+      }
     }
 
     &__link-registration {
-      width: 31px;
-      height: 31px;
+
       background-color: $--color-main;
       border: none;
       outline: none;
       cursor: pointer;
+
     }
 
     &__profile-icon {
       width: 30px;
       height: 30px;
-    }
 
-    &__link-cart {
-      width: 30px;
-      height: 27px;
+      @media (max-width: 768px) {
+        width: 23px;
+        height: 23px;
+      }
+
     }
 
     &__group-icon {
+      padding-top: 5px;
       width: 28px;
-      height: 31px;
+      height: 28px;
+
+      @media (max-width: 768px) {
+        width: 23px;
+        height: 25px;
+      }
+
     }
 
     &__bottom-wrap {
@@ -593,10 +614,9 @@ export default {
       left: 7px;
 
       width: 20px;
-      height: 2.25px;
+      height: 2px;
       background: $--color-main;
 
-      border-radius: 3px;
       
       &::after,
       &::before {
@@ -606,17 +626,16 @@ export default {
         left: 0;
         width: 20px;
         background: $--color-main;
-        border-radius: 3px;
       }
 
       &::after {
         top: -6px;
-        height: 2.5px;
+        height: 2px;
       }
       
       &::before {
         top: 6px;
-        height: 2.5px;
+        height: 2px;
       }
     }
 
@@ -661,7 +680,7 @@ export default {
     }
 
     &__container-menu {
-      // display: none;
+      display: none;
       position: absolute;
       top: 0;
       left: 0px;
@@ -682,14 +701,20 @@ export default {
       min-height: 435px;
       background: #FFFBF8;
       margin-top: 82px;
+
+      color: $--color-main;
       
       /* тень активная */
       box-shadow: 5px 6px 15px rgba(251, 121, 27, 0.63);
     }
 
     &__category {
-      width: 255px;
+      width: 245px;
       border-right: 2px solid rgba(42, 42, 42, 0.26);
+    }
+
+    &__list-category {
+      width: 245px;
     }
 
     &__button-close {
@@ -729,6 +754,18 @@ export default {
         transform: rotate(-45deg);
       }
 
+      &:hover,
+      &:focus {
+        color: $--color-active;
+        transition: color 0.2s ease;
+
+        &::before,
+        &::after {
+          background: $--color-active;
+          transition: all 0.2s ease;
+        }
+      }
+
     }
 
     &__catalog-link {
@@ -739,6 +776,7 @@ export default {
       font-family: "trebuchetms";
       font-weight: 700;
       font-size: 16px;
+      color: inherit;
 
       background: #FFFBF8;
       border: 0;
@@ -778,7 +816,8 @@ export default {
       width: 864px;
       padding-left: 30px;
       padding-top: 17px;
-      padding-right: 50px;
+
+      box-sizing: border-box;
     }
 
     &__catalog-title {
@@ -787,16 +826,22 @@ export default {
       font-size: 20px;
     }
 
-    &__list-wrapper {
+
+    &__list-product {
       display: flex;
-      margin-top: 25px;
-      width: 100%;
-      box-sizing: border-box;
+      flex-flow: wrap;
+      justify-content: space-between;
+      align-content: flex-start;
+      padding-right: 10px;
+      margin-top: 20px;
     }
 
     &__product-item {
       list-style: none;
-      display: inline;
+      display: block;
+      min-width: 158px;
+      width: 30%;
+      padding: 10px 0;
     }
 
     &__link-product {
@@ -805,10 +850,7 @@ export default {
       font-family: "trebuchetms";
       font-weight: 700;
       font-size: 16px;
-      width: 100%;
-      height: 40px;
-      line-height: 249.6%;
-      white-space: nowrap;
+      color: inherit;
       cursor: pointer;
 
       &:hover,
