@@ -2,8 +2,12 @@
   <main class="greetings">
     <slider-main 
       :options="options"
+      newClass="item-banner"
     >
-      <template v-for="slide in slides" :key="slide.id">
+      <template 
+        v-for="slide in slides" 
+        :key="slide.id"
+      >
         <splide-slide class="banner__slide" >
           <item-banner-on-main
             :index="slide.id"
@@ -15,10 +19,17 @@
       </template>
     </slider-main>
     <catalog-on-main />
-    <slider-card-on-main
+    <div class="title">
+      <h2>Ближайшие мероприятия</h2>
+    </div>
+    <slider-main
       :options="optionsCard"
-       >
-      <template v-for="card in cards" :key="card.id">
+      newClass="card"
+    >
+      <template 
+        v-for="card in cards"
+        :key="card.id"
+      >
         <splide-slide class="banner__slide" >
           <card-product
             :src="card.src"
@@ -30,7 +41,10 @@
           />
           </splide-slide>
       </template>
-    </slider-card-on-main>
+    </slider-main>
+    <div class="title">
+      <h2>Ближайшие мероприятия 85456</h2>
+    </div>
     <event-on-main />
     <more-info-on-main />
     <info-shop-on-main />
@@ -46,7 +60,6 @@ import EventOnMain from '@/components/EventOnMain.vue'
 import InfoShopOnMain from '@/components/InfoShopOnMain.vue'
 import ContactsAndMap from '@/components/ContactsAndMap.vue'
 import ItemBannerOnMain from '@/components/ItemBannerOnMain.vue'
-import SliderCardOnMain from '@/components/SliderCardOnMain.vue'
 import CardProduct from './cardProduct.vue'
   
 export default {
@@ -160,7 +173,6 @@ export default {
     InfoShopOnMain,
     ContactsAndMap,
     ItemBannerOnMain,
-    SliderCardOnMain,
     CardProduct
 }
 }
@@ -174,8 +186,12 @@ export default {
       color: $--color-dove-gray;
       font-family: "trebuchetms";
     }
-  
-    
+  }
+  .title {
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 45px;
+    padding: 0 20px;
   }
   
 </style>
