@@ -12,6 +12,7 @@ import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import LinkButton from './LinkButton.vue';
 
 export default {
+  name: 'slider-main',
 
   props: {
     options: {
