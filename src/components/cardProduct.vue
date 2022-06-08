@@ -2,7 +2,7 @@
   <div class="card">
     <div class="card__wrapp">
       <img class="card__img" :src="src">
-      <div class="card__sale">-15%</div>
+      <div class="card__sale" v-if="sale && discount">-{{sale}}%</div>
       <div class="card__params">
         <div class="card__audience">
           <img src="@/assets/images/audience_1.svg" alt="">
@@ -16,8 +16,8 @@
       </div>
       <h4 class="card__name">{{ name }}</h4>
       <div class="card__price-wrap">
-        <del class="card__discount">4350 ₽</del>
-        <p class="card__price">{{ price }} ₽</p>
+        <p class="card__price" :class="{'strike-out': discount}">{{ price }} ₽</p>
+        <p class="card__discount" v-if="discount && sale">{{discount}} ₽</p>
       </div>  
       <button class="card__basket">В корзину <img src="@/assets/images/shopping-cart.svg" alt=""></button>
       <a class="card__buy-now" href="">Купить в 1 клик</a>
@@ -30,32 +30,39 @@
   export default {
     
     props: {
- 
-    src: {
-      type: String,
-      default: ''
-    },
-    comunity: {
-      type: String,
-      default: ''
-    },
-    time: {
-      type: String,
-      default: ''
-    },
-    age: {
-      type: String,
-      default: ''
-    },
-    name: {
-      type: String,
-      default: ''
-    },
-    price: {
-      type: String,
-      default: ''
-    },
-  }
+      src: {
+        type: String,
+        default: ''
+      },
+      comunity: {
+        type: String,
+        default: ''
+      },
+      time: {
+        type: String,
+        default: ''
+      },
+      age: {
+        type: String,
+        default: ''
+      },
+      name: {
+        type: String,
+        default: ''
+      },
+      price: {
+        type: String,
+        default: ''
+      },
+      sale: {
+        type: Number,
+        default: 0,
+      },
+      discount: {
+        type: String,
+        default: '',
+      }
+    }
   }
 
 </script>
@@ -73,7 +80,7 @@
 
     &__wrapp {
       position: relative;
-      margin: 15px auto;
+      margin: 0  auto 15px;
       box-sizing: border-box;
       width: 80%;
       padding-top: 10px;
@@ -133,7 +140,7 @@
       color: #FFFFFF;
 
       top: 20px;
-      right: -20px;
+      right: 0px;
     }
 
     &__time {
@@ -163,12 +170,21 @@
       font-size: 20px;
       line-height: 24px;
       color: $--color-main;
+      
+    }
+
+    &__price {
       margin: 8px 10px;
+    }
+
+    &__discount {
+      margin-right: 10px;
     }
 
     &__price-wrap {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
+      align-items: center;
     }
 
     &__basket {
@@ -210,6 +226,24 @@
       font-weight: 700;
       font-size: 16px;
       line-height: 19px;
+    }
+
+    .strike-out {
+      opacity: 0.6;
+      font-weight: 400;
+      font-size: 18px;
+      margin-left: 20px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 107px;
+        left: 25px;
+        width: 60px;
+        height: 2px;
+        background: $--color-black;
+        transform: rotate(-10deg);
+      }
     }
   }
 </style>

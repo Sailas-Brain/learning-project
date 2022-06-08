@@ -27,7 +27,7 @@
       newClass="card"
     >
       <template 
-        v-for="card in cards"
+        v-for="card in cardsForMobile"
         :key="card.id"
       >
         <splide-slide class="banner__slide" >
@@ -51,7 +51,7 @@
       newClass="card"
     >
       <template 
-        v-for="card in cards"
+        v-for="card in cardsSaleForMobile"
         :key="card.id"
       >
         <splide-slide class="banner__slide" >
@@ -62,8 +62,10 @@
             :age="card.age"
             :name="card.name"
             :price="card.price"
+            :sale="card.sale"
+            :discount="card.discount"
           />
-          </splide-slide>
+        </splide-slide>
       </template>
     </slider-main>
 
@@ -86,6 +88,18 @@ import ItemBannerOnMain from '@/components/ItemBannerOnMain.vue'
 import CardProduct from './cardProduct.vue'
   
 export default {
+  
+  components: {
+    SliderMain,
+    CatalogOnMain,
+    moreInfoOnMain,
+    EventOnMain,
+    InfoShopOnMain,
+    ContactsAndMap,
+    ItemBannerOnMain,
+    CardProduct
+  },
+
   data() {
     return {
       options: {
@@ -157,7 +171,7 @@ export default {
           time: '30-60',
           age: '18',
           name: 'Magic: the Gathering',
-          price: '3657'
+          price: '3657',
         },
         {
           id: 2,
@@ -166,7 +180,7 @@ export default {
           time: '20-40',
           age: '6',
           name: 'Гравити Фолз: Спасти Пухлю',
-          price: '2657'
+          price: '6000',
         },
         {
           id: 3,
@@ -186,20 +200,232 @@ export default {
           name: 'Звездные войны Внешнее кольцо',
           price: '3957'
         },
+        {
+          id: 5,
+          src: '/src/assets/images/chaos_space_marines.jpg',
+          comunity: '2-4',
+          time: '30-60',
+          age: '18',
+          name: 'Magic: the Gathering',
+          price: '3657',
+        },
+        {
+          id: 6,
+          src: '/src/assets/images/gravity_falls-card.jpg',
+          comunity: '2-6',
+          time: '20-40',
+          age: '6',
+          name: 'Гравити Фолз: Спасти Пухлю',
+          price: '6000',
+        },
+        {
+          id: 7,
+          src: '/src/assets/images/broken_realms-card.jpg',
+          comunity: '2-4',
+          time: '30-60',
+          age: '18',
+          name: "Broken Realms: Horrek's Dreadlance",
+          price: '4999'
+        },
+        {
+          id: 8,
+          src: '/src/assets/images/star_wars-card.jpg',
+          comunity: '3-8',
+          time: '30-60',
+          age: '16',
+          name: 'Звездные войны Внешнее кольцо',
+          price: '3957'
+        },
+        {
+          id: 9,
+          src: '/src/assets/images/chaos_space_marines.jpg',
+          comunity: '2-4',
+          time: '30-60',
+          age: '18',
+          name: 'Magic: the Gathering',
+          price: '3657',
+          sale: 15,
+        },
+        {
+          id: 10,
+          src: '/src/assets/images/gravity_falls-card.jpg',
+          comunity: '2-6',
+          time: '20-40',
+          age: '6',
+          name: 'Гравити Фолз: Спасти Пухлю',
+          price: '6000',
+        },
+        {
+          id: 11,
+          src: '/src/assets/images/broken_realms-card.jpg',
+          comunity: '2-4',
+          time: '30-60',
+          age: '18',
+          name: "Broken Realms: Horrek's Dreadlance",
+          price: '4999',
+        },
+        {
+          id: 12,
+          src: '/src/assets/images/star_wars-card.jpg',
+          comunity: '3-8',
+          time: '30-60',
+          age: '16',
+          name: 'Звездные войны Внешнее кольцо',
+          price: '3957'
+        },
+      ],
+      cardsSale: [
+        {
+          id: 1,
+          src: '/src/assets/images/chaos_space_marines.jpg',
+          comunity: '2-4',
+          time: '30-60',
+          age: '18',
+          name: 'Magic: the Gathering',
+          price: '3657',
+          sale: 15,
+          discount: '2999',
+        },
+        {
+          id: 2,
+          src: '/src/assets/images/gravity_falls-card.jpg',
+          comunity: '2-6',
+          time: '20-40',
+          age: '6',
+          name: 'Гравити Фолз: Спасти Пухлю',
+          price: '6000',
+          sale: 20,
+          discount: '3999',
+        },
+        {
+          id: 3,
+          src: '/src/assets/images/broken_realms-card.jpg',
+          comunity: '2-4',
+          time: '30-60',
+          age: '18',
+          name: "Broken Realms: Horrek's Dreadlance",
+          price: '4999',
+          sale: 15,
+          discount: '3999',
+        },
+        {
+          id: 4,
+          src: '/src/assets/images/star_wars-card.jpg',
+          comunity: '3-8',
+          time: '30-60',
+          age: '16',
+          name: 'Звездные войны Внешнее кольцо',
+          price: '3957',
+          sale: 15,
+          discount: '2999',
+        },
+        {
+          id: 5,
+          src: '/src/assets/images/chaos_space_marines.jpg',
+          comunity: '2-4',
+          time: '30-60',
+          age: '18',
+          name: 'Magic: the Gathering',
+          price: '3657',
+          sale: 20,
+          discount: '3999',
+        },
+        {
+          id: 6,
+          src: '/src/assets/images/gravity_falls-card.jpg',
+          comunity: '2-6',
+          time: '20-40',
+          age: '6',
+          name: 'Гравити Фолз: Спасти Пухлю',
+          price: '6000',
+          sale: 20,
+          discount: '3999',
+        },
+        {
+          id: 7,
+          src: '/src/assets/images/broken_realms-card.jpg',
+          comunity: '2-4',
+          time: '30-60',
+          age: '18',
+          name: "Broken Realms: Horrek's Dreadlance",
+          price: '4999',
+          sale: 15,
+          discount: '3999',
+        },
+        {
+          id: 8,
+          src: '/src/assets/images/star_wars-card.jpg',
+          comunity: '3-8',
+          time: '30-60',
+          age: '16',
+          name: 'Звездные войны Внешнее кольцо',
+          price: '3957',
+          sale: 15,
+          discount: '3999',
+        },
+        {
+          id: 9,
+          src: '/src/assets/images/chaos_space_marines.jpg',
+          comunity: '2-4',
+          time: '30-60',
+          age: '18',
+          name: 'Magic: the Gathering',
+          price: '3657',          
+          sale: 15,
+          discount: '3999',
+        },
+        {
+          id: 10,
+          src: '/src/assets/images/gravity_falls-card.jpg',
+          comunity: '2-6',
+          time: '20-40',
+          age: '6',
+          name: 'Гравити Фолз: Спасти Пухлю',
+          price: '6000',
+          sale: 30,
+          discount: '3999',
+        },
+        {
+          id: 11,
+          src: '/src/assets/images/broken_realms-card.jpg',
+          comunity: '2-4',
+          time: '30-60',
+          age: '18',
+          name: "Broken Realms: Horrek's Dreadlance",
+          price: '4999',
+          sale: 10,
+          discount: '4000',
+        },
+        {
+          id: 12,
+          src: '/src/assets/images/star_wars-card.jpg',
+          comunity: '3-8',
+          time: '30-60',
+          age: '16',
+          name: 'Звездные войны Внешнее кольцо',
+          price: '3957',
+          sale: 15,
+          discount: '3999',
+        },
       ],
     }
   },
 
-  components: {
-    SliderMain,
-    CatalogOnMain,
-    moreInfoOnMain,
-    EventOnMain,
-    InfoShopOnMain,
-    ContactsAndMap,
-    ItemBannerOnMain,
-    CardProduct
-}
+  computed: {
+    cardsSaleForMobile() {
+      if(window.innerWidth < 800) {
+        return this.cardsSale.filter((elem, index) => index < 4);
+      }
+      return this.cardsSale
+    },
+    cardsForMobile() {
+      if(window.innerWidth < 800) {
+        return this.cards.filter((elem, index) => index < 4);
+      }
+      return this.cards
+    }
+  },
+ 
 }
 
 </script>
@@ -215,8 +441,18 @@ export default {
   .title {
     max-width: 1100px;
     margin: 0 auto;
-    margin-top: 45px;
+    margin-top: 85px;
+    margin-bottom: 20px;
     padding: 0 20px;
+
+    @media (max-width: 830px) {
+      margin-top: 60px;
+    }
+    
+    @media (max-width: 600px) {
+      margin-top: 40px;
+    }
+
   }
-  
+
 </style>

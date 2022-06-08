@@ -63,10 +63,6 @@
       @include title-h2 ();
 
       margin-bottom: 21px;
-
-      @media (max-width: 500px) {
-        font-size: 27px;
-      }
     }
 
     &__article {
