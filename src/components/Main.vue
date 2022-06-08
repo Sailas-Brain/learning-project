@@ -68,7 +68,7 @@ export default {
       options: {
         rewind : true,
         width  : '100%',
-        // gap    : '1rem',
+        autoplay: 5000,
         type   : 'loop',
         padding: '20%',
         pagination: false,
