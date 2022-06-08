@@ -48,11 +48,18 @@ export default {
 <style lang="scss" scoped>
   .item-banner {
     width: 100%;
+    height: auto;
     margin: 0 auto;
 
     &__img {
       margin: 0px 8px;
       width: 100%;
+      height: 100%;
+
+      @media (max-width: 768px) {
+        object-fit: none;
+        min-height: 300px;
+      }
     }
 
     &__wrap {
@@ -91,6 +98,11 @@ export default {
       font-size: 28px;
       line-height: 33px;
       color: $--color-white;
+
+      @media (max-width: 768px) {
+        font-size: 26px;
+        line-height: 30px;
+      }
     }
 
     &__slide {
@@ -98,6 +110,9 @@ export default {
 
       @media (max-width: 1300px) {
         padding-right: 15px;
+      }
+      @media (max-width: 768px) {
+        min-height: 300px;
       }
     
     }
