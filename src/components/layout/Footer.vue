@@ -3,7 +3,7 @@
     <div class="footer__top">
       <div class="footer__wrapper">
         <div class="footer__logo">
-          <a href="#"><img src="@/assets/pictures/Logo.svg" alt=""></a>
+          <a href="#"><img src="@/assets/pictures/Logo.png" alt=""></a>
           <p>г. Москва ст.м. Таганская Малый Дровяной переулок 6</p>
         </div>
 
@@ -41,13 +41,8 @@
           <div class="footer__icons">
             <icon-social />
           </div>
-          
-
         </div>
-
-        
-      </div>
-        
+      </div> 
     </div>
 
     <div class="footer__bottom">
@@ -67,9 +62,7 @@
           <p>Содержимое не является публичной офертой</p>
           <a href="#">Пользовательское соглашение</a>
         </div>
-        
       </div>
-
     </div>
   </footer>
 </template>
@@ -78,27 +71,27 @@
 <script>
 import IconSocial from '../IconSocial.vue'
 
-
-
 export default {
   components: { IconSocial },
-
 }
 </script>
 
 <style lang="scss" scoped>
 
 a {
-  color: #FFFFFF;
+  color: $--color-white;
   text-decoration: none
 }
   .footer {
     width: 100%;
-    background: #2A2A2A;
-    color: #FFFFFF;
+    background: $--color-main;
+    color: $--color-white;
     margin-top: 85px;
-    
 
+    @media (max-width: 770px) {
+      margin-top: 35px;
+    }
+    
     &__top {
       border-bottom: 1px solid rgba(255, 255, 255, 0.25);
       padding-top: 30px;
@@ -109,7 +102,6 @@ a {
         border: none;
       }
     }
-
 
     &__wrapper {
       max-width: 1110px;
@@ -127,7 +119,6 @@ a {
           text-align: center;
           margin: 0px auto;
         }
-
       }
 
       @media (max-width: 1150px) { 
@@ -148,17 +139,36 @@ a {
       max-width: 214px;
       margin: 0 8px;
 
+      a {
+        display: block;
+      }
+
       p {
         font-family: "trebuchetms";
         font-weight: 400;
         font-size: 16px;
         line-height: 19px;
+        margin-top: 10px;
+
+        @media (max-width: 768px) {
+          margin-top: 20px;
+        }
+      }
+
+      img {
+        width: 152px;
+        height: 40px;
+
+        @media (max-width: 500px) { 
+          width: 121px;
+          height: 33px;
+        }
       }
 
       @media (max-width: 770px) { 
         margin-bottom: 13px;
+        margin-top: 20px;
       }
-
     }
 
     &__catalog {
@@ -178,7 +188,7 @@ a {
 
       &:hover,
       &:focus {
-        color: #F9A43F;
+        color: $--color-active;
         transition: all 0.3s ease;
       }
 
@@ -191,11 +201,10 @@ a {
 
         &:hover,
         &:focus {
-          color: #F9A43F;
+          color: $--color-active;
           transition: all 0.3s ease;
         }
       }
-
     }
 
     &__catalog-list {
@@ -227,7 +236,7 @@ a {
 
       &:hover,
       &:focus {
-        color: #F9A43F;
+        color: $--color-active;
         transition: all 0.3s ease;
       }
     }
@@ -245,7 +254,7 @@ a {
 
         &:hover,
         &:focus {
-          color: #F9A43F;
+          color: $--color-active;
           transition: all 0.3s ease;
         }
       }
@@ -268,7 +277,7 @@ a {
 
         &:hover,
         &:focus {
-          color: #F9A43F;
+          color: $--color-active;
           transition: all 0.3s ease;
         }
       }
@@ -282,9 +291,9 @@ a {
     &__button {
       width: 225px;
       height: 51px;
-      border: 1px solid #F9A43F;
+      border: 1px solid $--color-active;
       border-radius: 9px;
-      color: #F9A43F;
+      color: $--color-active;
       font-family: "trebuchetms";
       font-weight: 700;
       font-size: 19px;
@@ -295,8 +304,8 @@ a {
 
       &:hover,
       &:focus {
-        color: #2A2A2A;
-        background-color: #F9A43F ;
+        color: $--color-main;
+        background-color: $--color-active ;
         transition: all 0.3s ease;
       }
 
@@ -319,8 +328,8 @@ a {
       a {
         &:hover,
         &:focus {
-          color: #2A2A2A;
-          background-color: #F9A43F ;
+          color: $--color-main;
+          background-color: $--color-active;
           transition: all 0.3s ease;
         }
       }
@@ -337,9 +346,6 @@ a {
     }
 
     &__confidential {
-
-      
-
       p {
         font-family: "trebuchetms";
         font-style: normal;
@@ -359,7 +365,7 @@ a {
         text-decoration: underline;
         
         &:hover {
-          color: #F9A43F;
+          color: $--color-active;
           transition: all 0.3s ease;
         }
       }
@@ -404,7 +410,7 @@ a {
         text-decoration: underline;
         
         &:hover {
-          color: #F9A43F;
+          color: $--color-active;
           transition: all 0.3s ease;
         }
       }
