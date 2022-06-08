@@ -1,48 +1,47 @@
 <template>
-    <div class="catalog">
-        <h2 class="catalog__title">Каталог</h2>
-        <div class="catalog__wrapper">
-            <div class="catalog__inner catalog__inner--one">
-                <img src="@/assets/images/tabel-games_catalog.jpg" alt="">
-                <div class="catalog__category">
-                    <p>Настольные игры</p>
-                </div>
-            </div>
-            <div class="catalog__inner catalog__inner--two">
-                <img src="@/assets/images/wargames_catalog.jpg" alt="">
-                <div class="catalog__category">
-                    <p>Варгеймы</p>
-                </div>
-            </div>
-            <div class="catalog__inner catalog__inner--three">
-                <img src="@/assets/images/paints_catalog.jpg" alt="">
-                <div class="catalog__category">
-                    <p>Краски</p>
-                </div>
-            </div>
-            <div class="catalog__inner catalog__inner--four">
-                <img src="@/assets/images/magic-cathering_catalog.jpg" alt="">
-                <div class="catalog__category">
-                    <p>Magic:the Cathering</p>
-                </div>
-            </div>
-            <div class="catalog__inner catalog__inner--five">
-                <img src="@/assets/images/all-catalog_catalog.jpg" alt="">
-                <div class="catalog__category">
-                    <p>Весь каталог</p>
-                </div>
-            </div>
-          
+  <div class="catalog">
+    <h2 class="catalog__title">Каталог</h2>
+    <div class="catalog__wrapper">
+      <div class="catalog__inner catalog__inner--one">
+        <img src="@/assets/images/tabel-games_catalog.jpg" alt="">
+        <div class="catalog__category">
+          <p>Настольные игры</p>
         </div>
+      </div>
+      <div class="catalog__inner catalog__inner--two">
+        <img src="@/assets/images/wargames_catalog.jpg" alt="">
+        <div class="catalog__category">
+          <p>Варгеймы</p>
+        </div>
+      </div>
+      <div class="catalog__inner catalog__inner--three">
+        <img src="@/assets/images/paints_catalog.jpg" alt="">
+        <div class="catalog__category">
+          <p>Краски</p>
+        </div>
+      </div>
+      <div class="catalog__inner catalog__inner--four">
+        <img src="@/assets/images/magic-cathering_catalog.jpg" alt="">
+        <div class="catalog__category">
+          <p>Magic:the Cathering</p>
+        </div>
+      </div>
+      <div class="catalog__inner catalog__inner--five">
+        <img src="@/assets/images/all-catalog_catalog.jpg" alt="">
+        <div class="catalog__category">
+          <p>Весь каталог</p>
+        </div>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
-  
+
   export default {
     name: 'catalog-on-main'
   }
-
+  
 </script>
 
 <style lang="scss" scoped>
@@ -51,7 +50,6 @@
     max-width: 1110px;
     margin: 0 auto;
     margin-top: 45px;
-    
     box-sizing: border-box;
 
     &__title {
@@ -63,26 +61,20 @@
         margin: 0 20px;
         margin-bottom: 22px;
       }
-      @media (max-width: 600px) {
-        font-size: 21px;
-        line-height: 24px;
-      }
     }
 
     &__wrapper {
-
       box-sizing: border-box;
       display: grid;
       grid-auto-flow: column;
       grid-template-areas: "a a b c" "a a d e";
-      grid-gap: 30px;
+      grid-gap: 20px;
       grid-row-gap: 1em;
-      
+      margin: 0 20px;
 
-      @media (max-width: 1120px) {
+      @media (max-width: 900px) {
         grid-template-areas: "a a" "b c" "d e";
         margin: 0 20px;
-        
       }
       @media (max-width: 600px) {
         display: block;
@@ -91,7 +83,6 @@
 
     &__inner {
       position: relative;
-      min-width: 255px;
       height: auto;
       filter: drop-shadow(5px 6px 16px rgba(42, 42, 42, 0.16));
 
@@ -123,11 +114,10 @@
 
       &--five {
         grid-area: e;
-        
       }
 
       &:first-child {
-        max-width: 540px;
+        max-width: 520px;
         height: 380px;
 
         @media (max-width: 1100px) {
@@ -135,18 +125,19 @@
           height: auto;
         }
       }
-
     }
 
     &__category {
       position: absolute;
+      display: flex;
+      align-items: center;
       bottom: 0;
       width: 100%;
       height: 50px;
       font-family: "trebuchetms";
       font-weight: 700;
       font-size: 18px;
-      line-height: 46px;
+      line-height: 21px;
       color: $--color-white;
       background: linear-gradient(180deg, #2A2A2A 0%, #2A2A2A 100%);
       border-radius: 0px 0px 9px 9px;
@@ -160,11 +151,8 @@
           color: $--color-active;
           transition: color 0.2s ease;
         }
-
       }
-
     }
-
   }
 
 </style>
