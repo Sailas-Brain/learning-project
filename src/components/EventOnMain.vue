@@ -38,7 +38,7 @@
 
 <script>
   export default {
-      name: 'event-on-main'
+    name: 'event-on-main'
   }
 </script>
 
