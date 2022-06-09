@@ -25,7 +25,30 @@
       </template>
   </slider-main> -->
 
-  <discription-product />
+  <tabs 
+    :tabs="tabs"
+    @handlerClick="changeContent"
+    :componentsList="comp"
+  >
+    <div class="tabs__item active" ref="item-0">
+      <h1>"hello world</h1>
+    </div>
+
+    <div class="tabs__item" ref="item-1">
+      <h1>"hello world2</h1>
+    </div>
+
+    <div class="tabs__item" ref="item-2">
+      <h1>"hello world3</h1>
+    </div>
+
+    <div class="tabs__item" ref="item-3">
+      <discription-product />
+    </div>
+
+  </tabs>
+
+
   <Footer />
 </template>
 
@@ -68,9 +91,18 @@ export default {
           src: '/src/assets/images/jenga-pdp-img1.jpg',
         },
       ],
+      tabs: ['1', '2', '3', '4',],
     }
-
   },
+
+  methods: {
+    changeContent(index) {
+      const allItems = document.querySelectorAll('.tabs__item');
+      allItems.forEach(elem => elem.classList.remove('active'));
+
+      this.$refs['item-' + index].classList.add("active");
+    }
+  }
 }
 
 </script>

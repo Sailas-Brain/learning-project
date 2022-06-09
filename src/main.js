@@ -22,5 +22,4 @@ app.use( VueSplide );
 
 app.use(VueCollapsiblePanel);
 
-
 app.mount('#app')
