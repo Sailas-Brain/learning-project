@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <slider-main :options="options">
+  <!-- <slider-main :options="options">
     <template 
         v-for="slide in slides" 
         :key="slide.id"
@@ -23,19 +23,23 @@
             :src="slide.src">
         </splide-slide>
       </template>
-  </slider-main>
+  </slider-main> -->
+
+  <discription-product />
   <Footer />
 </template>
 
 <script>
 import Header from '@/components/layout/Header.vue'
 import Footer from '@/components/layout/Footer.vue'
+import DiscriptionProduct from '@/components/DiscriptionProduct.vue'
   
 export default {
   
   components: {
     Header,
-    Footer
+    Footer,
+    DiscriptionProduct
   },
   
   data() {
@@ -57,11 +61,11 @@ export default {
         },
         {
           id: 2,
-          src: '/src/assets/images/jenga-pdp-img2.jpg',
+          src: '/src/assets/images/jenga-pdp-img1.jpg',
         },
         {
           id: 3,
-          src: '/src/assets/images/jenga-pdp-img3.jpg',
+          src: '/src/assets/images/jenga-pdp-img1.jpg',
         },
       ],
     }
