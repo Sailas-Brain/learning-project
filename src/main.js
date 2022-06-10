@@ -7,6 +7,8 @@ import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 import VueCollapsiblePanel from '@dafcoe/vue-collapsible-panel';
 // import '@dafcoe/vue-collapsible-panel/dist/vue-collapsible-panel.css'
 
+
+
 const app = createApp(App)
 
 // console.log(componenst);
