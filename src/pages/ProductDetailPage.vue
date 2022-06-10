@@ -31,15 +31,15 @@
     :componentsList="comp"
   >
     <div class="tabs__item active" ref="item-0">
-      <h1>"hello world</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit harum sit quia libero et dolore.</p>
     </div>
 
     <div class="tabs__item" ref="item-1">
-      <h1>"hello world2</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, fuga eos. Sint veritatis itaque omnis unde cumque animi, laborum sed.</p>
     </div>
 
     <div class="tabs__item" ref="item-2">
-      <h1>"hello world3</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit tempora laboriosam esse repudiandae! Dolores, dolor debitis eum repudiandae esse aliquam ad praesentium quam reprehenderit fugiat sequi laudantium excepturi, distinctio ratione.</p>
     </div>
 
     <div class="tabs__item" ref="item-3">
@@ -91,7 +91,7 @@ export default {
           src: '/src/assets/images/jenga-pdp-img1.jpg',
         },
       ],
-      tabs: ['1', '2', '3', '4',],
+      tabs: ['Описание', 'Характеристики', 'Правила', ' Вопрос-ответ',],
     }
   },
 

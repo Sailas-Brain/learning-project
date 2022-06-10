@@ -60,34 +60,43 @@ export default {
 <style lang="scss">
 
   .tabs {
-    max-width: 700px;
+    max-width: 726px;
     margin: 0 auto;
+    font-family: "trebuchetms";
+    
 
     &__tabs-navigation {
       display: flex;
       justify-content: space-between;
+      border-bottom: 1px solid rgba(42, 42, 42, 0.12);
     }
 
     &__tab-btn {
-      width: 150px;
-      height: 30px;
       cursor: pointer;
-      border-radius: 6px;
-
+      border: none;
+      background: inherit;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 30px;
+      
       &.active {
-        background: #999;
+        border-bottom: 3px solid #2A2A2A;
       }
     }
 
-    &__tabs-content {
-      margin-top: 30px;
-    }
+    // &__tabs-content {
+    //   margin-bottom: 10px;
+    // }
 
     &__item {
       display: none;
 
       &.active {
         display: block;
+      }
+
+      p {
+        margin-top: 20px;
       }
     }
 
