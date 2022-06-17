@@ -81,9 +81,9 @@
                 <template #content>
                   <div class="checkbox__custom">
                    <label class="check-box">
-                      <input type="checkbox" name="ages3-5">
+                      <input type="checkbox" name="only-sale">
                       <span></span>
-                      3-5 лет
+                      Только со скидкой
                     </label>
                   </div>
                 </template>
