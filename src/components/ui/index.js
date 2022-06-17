@@ -8,6 +8,7 @@ export default [
   MyBotton,
   LinkButton,
   CallOrderForm,
+  BreadCrumbs,
   SliderMain,
   Tabs
 ]

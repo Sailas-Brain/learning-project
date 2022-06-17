@@ -1,20 +1,27 @@
 <template>
   <Header />
-  <Catalog />
+  <main>
+    <catalog-banner />
+    <Filter />
+
+  </main>
+
   <Footer />
 </template>
 
 <script>
-import Catalog from '@/components/catalog.vue'
 import Header from '@/components/layout/Header.vue'
 import Footer from '@/components/layout/Footer.vue'
+import CatalogBanner from '@/components/CatalogBanner.vue'
+import Filter from '@/components/Filter.vue'
   
 export default {
   
   components: {
-    Catalog,
     Header,
-    Footer
+    Footer,
+    CatalogBanner,
+    Filter,
   },
   
   data() {

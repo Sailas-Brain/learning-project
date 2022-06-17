@@ -376,6 +376,7 @@ export default {
       }
 
     }
+    /*бургер на мобильном */
 
     /* desktop*/
 
