@@ -60,11 +60,9 @@ export default {
 <style lang="scss">
 
   .tabs {
-    max-width: 726px;
-    margin: 0 auto;
+    width: 70%;
     font-family: "trebuchetms";
     
-
     &__tabs-navigation {
       display: flex;
       justify-content: space-between;
